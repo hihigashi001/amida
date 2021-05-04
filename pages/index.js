@@ -1,65 +1,99 @@
-import Head from 'next/head'
-import styles from '../styles/Home.module.css'
+import { useState } from "react"
+import cc from "classcat";
 
 export default function Home() {
+  const [count, setCount] = useState(10)
+  const onClickOneAdd = () => {
+    setCount(() => count + 1)
+    console.log(count)
+  }
+  const onClickOneSub = () => {
+    setCount(() => count - 1)
+  }
+  const Colgroup = () => {
+    return (
+      <>
+        {
+          (() => {
+            const Colgroups = [];
+            for (let i = 0; i < 20; i++) {
+              Colgroups.push(<col key={i} width="5%" />)
+            }
+            return (
+              <colgroup>
+                {
+                  Colgroups.map((colgroup) => {
+                    return colgroup;
+                  })
+                }
+              </colgroup>
+            )
+          })()
+        }
+      </>
+    )
+  }
+
+  const PlayerHead = ({ playerCount }) => {
+    return (
+      <table className="w-full table-fixed">
+        <Colgroup />
+        <tbody className="w-full">
+          {
+            (() => {
+              const thTagCreate = [];
+              for (let i = 0; i < playerCount; i++) {
+                thTagCreate.push(<th className="border border-gray-700 p-4 text-xs" colSpan="2">PlayerName1111111111111111</th>)
+              }
+              for (let i = playerCount; i < 10; i++) {
+                thTagCreate.push(<th colSpan="2">　</th>)
+              }
+              return (
+                <tr className="w-full">
+                  {
+                    thTagCreate.map((thTag) => {
+                      return thTag;
+                    })
+                  }
+                </tr>
+              )
+            })()
+          }
+        </tbody>
+      </table>
+    )
+  }
+
   return (
-    <div className={styles.container}>
-      <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Hellow  <a href="https://nextjs.org">Next.js!</a>
-        </h1>
-
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.js</code>
-        </p>
-
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className={styles.card}
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
-        </div>
-      </main>
-
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
-        </a>
-      </footer>
+    <div>
+      <div>
+        <h1 className="text-xl">あみだくじ</h1>
+      </div>
+      <div>
+        <button type="button" className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mx-2" onClick={onClickOneAdd}>+1</button>
+        <button type="button" className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mx-2" onClick={onClickOneSub}>-1</button>
+      </div>
+      <div className="p-8">
+        <PlayerHead playerCount={count} />
+        <table className="w-full">
+          <Colgroup />
+          <tbody className="w-full">
+            <tr className="w-full">
+              <th>6</th>
+              <th colSpan="2">1</th>
+              <th colSpan="2">2</th>
+              <th colSpan="2">1</th>
+              <th colSpan="2">2</th>
+              <th colSpan="2">2</th>
+              <th colSpan="2">1</th>
+              <th colSpan="2">2</th>
+              <th colSpan="2">1</th>
+              <th colSpan="2">2</th>
+              <th>6</th>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </div>
   )
 }
