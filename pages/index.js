@@ -14,10 +14,14 @@ const Home = () => {
   const [count, setCount] = useState(10)
 
   const onClickOneAdd = () => {
-    setCount(() => count + 1)
+    if (count < 10) {
+      setCount(() => count + 1)
+    }
   }
   const onClickOneSub = () => {
-    setCount(() => count - 1)
+    if (count > 2) {
+      setCount(() => count - 1)
+    }
   }
 
   return (
@@ -27,6 +31,7 @@ const Home = () => {
       </div>
       <div>
         <Button className="mx-2" onClick={onClickOneAdd}>+1</Button>
+        <p className="inline font-bold text-2xl mx-2">{count} 本</p>
         <Button className="mx-2" onClick={onClickOneSub}>-1</Button>
       </div>
       <div className="p-8">
