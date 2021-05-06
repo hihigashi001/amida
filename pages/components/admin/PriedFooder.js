@@ -1,5 +1,5 @@
 // shared Componets
-import { Colgroup } from "./shared/Colgroup"
+import { Colgroup } from "../shared/Colgroup"
 
 export const PriedFooder = (props) => {
     const valueChange = (i) => {

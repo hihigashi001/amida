@@ -6,11 +6,11 @@ import { Button } from "./components/shared/Button"
 import { Colgroup } from "./components/shared/Colgroup"
 
 // Componets
-import { PlayerHead } from "./components/PlayerHead"
-import { PriedFooder } from "./components/PriedFooder"
-import { BoderCount } from "./components/BoderCount"
-import { HideModal } from "./components/HideModal"
-import { HideModalSpace } from "./components/HideModalSpace"
+import { PlayerHead } from "./components/admin/PlayerHead"
+import { PriedFooder } from "./components/admin/PriedFooder"
+import { BoderCount } from "./components/admin/BoderCount"
+import { HideModal } from "./components/admin/HideModal"
+import { HideModalSpace } from "./components/admin/HideModalSpace"
 
 const Home = () => {
   const [count, setCount] = useState(10)
