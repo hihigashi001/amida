@@ -10,10 +10,10 @@ export const HideModalSpace = ({ playerCount }) => {
                     (() => {
                         const thTagCreate = [];
                         for (let i = 0; i < playerCount; i++) {
-                            thTagCreate.push(<th className="p-4 text-xs" colSpan="2"></th>)
+                            thTagCreate.push(<th key={i} className="p-4 text-xs" colSpan="2"></th>)
                         }
                         for (let i = playerCount; i < 10; i++) {
-                            thTagCreate.push(<th colSpan="2">　</th>)
+                            thTagCreate.push(<th key={i} colSpan="2">　</th>)
                         }
                         return (
                             <tr className="w-full">

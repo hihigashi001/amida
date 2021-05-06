@@ -14,6 +14,16 @@ import { HideModalSpace } from "./components/HideModalSpace"
 
 const Home = () => {
   const [count, setCount] = useState(10)
+  const [pried1, setPried1] = useState("あたり")
+  const [pried2, setPried2] = useState("はずれ")
+  const [pried3, setPried3] = useState("はずれ")
+  const [pried4, setPried4] = useState("はずれ")
+  const [pried5, setPried5] = useState("はずれ")
+  const [pried6, setPried6] = useState("はずれ")
+  const [pried7, setPried7] = useState("はずれ")
+  const [pried8, setPried8] = useState("はずれ")
+  const [pried9, setPried9] = useState("はずれ")
+  const [pried10, setPried10] = useState("はずれ")
 
   const onClickOneAdd = () => {
     if (count < 10) {
@@ -65,7 +75,29 @@ const Home = () => {
           <HideModal playerCount={count} />
           <HideModalSpace playerCount={count} />
         </div>
-        <PriedFooder playerCount={count} />
+        <PriedFooder 
+          playerCount={count} 
+          pried1={pried1}
+          pried2={pried2}
+          pried3={pried3}
+          pried4={pried4}
+          pried5={pried5}
+          pried6={pried6}
+          pried7={pried7}
+          pried8={pried8}
+          pried9={pried9}
+          pried10={pried10}
+          setPried1={setPried1}
+          setPried2={setPried2}
+          setPried3={setPried3}
+          setPried4={setPried4}
+          setPried5={setPried5}
+          setPried6={setPried6}
+          setPried7={setPried7}
+          setPried8={setPried8}
+          setPried9={setPried9}
+          setPried10={setPried10}
+        />
       </div>
     </div>
   )
