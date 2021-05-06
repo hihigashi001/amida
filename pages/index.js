@@ -9,6 +9,8 @@ import { Colgroup } from "./components/shared/Colgroup"
 import { PlayerHead } from "./components/PlayerHead"
 import { PriedFooder } from "./components/PriedFooder"
 import { BoderCount } from "./components/BoderCount"
+import { HideModal } from "./components/HideModal"
+import { HideModalSpace } from "./components/HideModalSpace"
 
 const Home = () => {
   const [count, setCount] = useState(10)
@@ -36,21 +38,33 @@ const Home = () => {
       </div>
       <div className="p-8">
         <PlayerHead playerCount={count} />
-        <table className="w-full table-fixed my-4">
-          <Colgroup />
-          <tbody className="w-full">
-            <BoderCount playerCount={count} />
-            <BoderCount playerCount={count} />
-            <BoderCount playerCount={count} />
-            <BoderCount playerCount={count} />
-            <BoderCount playerCount={count} />
-            <BoderCount playerCount={count} />
-            <BoderCount playerCount={count} />
-            <BoderCount playerCount={count} />
-            <BoderCount playerCount={count} />
-            <BoderCount playerCount={count} />
-          </tbody>
-        </table>
+        <div className="relative">
+          <table className="w-full table-fixed my-4 absolute">
+            <Colgroup />
+            <tbody className="w-full">
+              <BoderCount playerCount={count} />
+              <BoderCount playerCount={count} />
+              <BoderCount playerCount={count} />
+              <BoderCount playerCount={count} />
+              <BoderCount playerCount={count} />
+              <BoderCount playerCount={count} />
+              <BoderCount playerCount={count} />
+              <BoderCount playerCount={count} />
+              <BoderCount playerCount={count} />
+              <BoderCount playerCount={count} />
+            </tbody>
+          </table>
+        </div>
+        <div className="relative">
+          <HideModalSpace playerCount={count} />
+          <HideModal playerCount={count} />
+          <HideModal playerCount={count} />
+          <HideModal playerCount={count} />
+          <HideModal playerCount={count} />
+          <HideModal playerCount={count} />
+          <HideModal playerCount={count} />
+          <HideModalSpace playerCount={count} />
+        </div>
         <PriedFooder playerCount={count} />
       </div>
     </div>
