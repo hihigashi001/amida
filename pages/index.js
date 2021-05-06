@@ -14,16 +14,16 @@ import { HideModalSpace } from "./components/HideModalSpace"
 
 const Home = () => {
   const [count, setCount] = useState(10)
-  const [pried1, setPried1] = useState("あたり")
-  const [pried2, setPried2] = useState("はずれ")
-  const [pried3, setPried3] = useState("はずれ")
-  const [pried4, setPried4] = useState("はずれ")
-  const [pried5, setPried5] = useState("はずれ")
-  const [pried6, setPried6] = useState("はずれ")
-  const [pried7, setPried7] = useState("はずれ")
-  const [pried8, setPried8] = useState("はずれ")
-  const [pried9, setPried9] = useState("はずれ")
-  const [pried10, setPried10] = useState("はずれ")
+  const [pried1, setPried1] = useState("◎当たり")
+  const [pried2, setPried2] = useState("✕")
+  const [pried3, setPried3] = useState("✕")
+  const [pried4, setPried4] = useState("✕")
+  const [pried5, setPried5] = useState("✕")
+  const [pried6, setPried6] = useState("✕")
+  const [pried7, setPried7] = useState("✕")
+  const [pried8, setPried8] = useState("✕")
+  const [pried9, setPried9] = useState("✕")
+  const [pried10, setPried10] = useState("✕")
 
   const onClickOneAdd = () => {
     if (count < 10) {

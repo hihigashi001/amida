@@ -59,7 +59,7 @@ export const PriedFooder = (props) => {
                             thTagCreate.push(
                                 <th key={i} className="px-2" colSpan="2">
                                     <input
-                                        className="appearance-none w-full border border-grey-700 hover:border-primary p-4 rounded placeholder-gray-400 text-gray-700 focus:outline-none focus:ring-2 focus:ring-secondary focus:ring-opacity-75 focus:bg-hover text-sm"
+                                        className="appearance-none w-full border border-primary hover:border-primary p-4 rounded placeholder-gray-400 text-gray-700 focus:outline-none focus:ring-2 focus:ring-secondary focus:ring-opacity-75 focus:bg-hover text-sm"
                                         name={"Player" + String(i + 1)}
                                         value={valueChange(i)}
                                         onChange={(event) => handleOnChange(event, i)}
