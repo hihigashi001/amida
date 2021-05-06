@@ -36,15 +36,20 @@ const Home = () => {
     }
   }
 
+  const onClickCreate = () => {
+    console.log(count)
+  }
+
   return (
     <div>
       <div>
-        <h1 className="text-xl">あみだくじ</h1>
+        <h1 className="text-xl text-gray-700">あみだくじ</h1>
       </div>
       <div>
         <Button className="mx-2" onClick={onClickOneAdd}>+1</Button>
-        <p className="inline font-bold text-2xl mx-2">{count} 本</p>
+        <p className="inline font-bold text-2xl mx-2 text-gray-700">{count} 本</p>
         <Button className="mx-2" onClick={onClickOneSub}>-1</Button>
+        <Button className="mx-2" onClick={onClickCreate}>あみだくじを作成する</Button>
       </div>
       <div className="p-8">
         <PlayerHead playerCount={count} />
@@ -75,8 +80,8 @@ const Home = () => {
           <HideModal playerCount={count} />
           <HideModalSpace playerCount={count} />
         </div>
-        <PriedFooder 
-          playerCount={count} 
+        <PriedFooder
+          playerCount={count}
           pried1={pried1}
           pried2={pried2}
           pried3={pried3}

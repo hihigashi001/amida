@@ -10,7 +10,7 @@ export const PlayerHead = ({ playerCount }) => {
             (() => {
               const thTagCreate = [];
               for (let i = 0; i < playerCount; i++) {
-                thTagCreate.push(<th key={i} className="border border-gray-700 p-4 text-xs" colSpan="2">参加者 {i+1}</th>)
+                thTagCreate.push(<th key={i} className="border border-gray-700 p-4 text-xs text-gray-700" colSpan="2">参加者 {i+1}</th>)
               }
               for (let i = playerCount; i < 10; i++) {
                 thTagCreate.push(<th key={i} colSpan="2">　</th>)
