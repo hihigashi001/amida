@@ -67,7 +67,7 @@ export const PriedFooder = (props) => {
                                 </th>)
                         }
                         for (let i = props.playerCount; i < 10; i++) {
-                            thTagCreate.push(<th colSpan="2">　</th>)
+                            thTagCreate.push(<th key={i} colSpan="2">　</th>)
                         }
                         return (
                             <tr className="w-full">

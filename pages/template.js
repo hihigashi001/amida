@@ -1,11 +1,11 @@
 // liblary
 import { useState } from "react"
 // Componets
-import { PlayerHead } from "./components/user/PlayerHead"
-import { PriedFooder } from "./components/user/PriedFooder"
-import { BoderCount } from "./components/user/BoderCount"
-import { HideModal } from "./components/user/HideModal"
-import { HideModalSpace } from "./components/user/HideModalSpace"
+import { PlayerHead } from "../components/user/PlayerHead"
+import { PriedFooder } from "../components/user/PriedFooder"
+import { BoderCount } from "../components/user/BoderCount"
+import { HideModal } from "../components/user/HideModal"
+import { HideModalSpace } from "../components/user/HideModalSpace"
 // function
 import { Random10 } from "../utility/function"
 
