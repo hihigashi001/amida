@@ -43,7 +43,7 @@ const Home = () => {
   return (
     <div>
       <div>
-        <h1 className="text-xl text-gray-700">あみだくじ</h1>
+        <h1 className="text-xl text-gray-700">管理者ページ</h1>
       </div>
       <div>
         <Button className="mx-2" onClick={onClickOneAdd}>+1</Button>

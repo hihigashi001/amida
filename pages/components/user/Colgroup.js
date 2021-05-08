@@ -1,11 +1,11 @@
-export const Colgroup = () => {
+export const Colgroup = ({ playerCount }) => {
     return (
       <>
         {
           (() => {
             const Colgroups = [];
-            for (let i = 0; i < 20; i++) {
-              Colgroups.push(<col key={i} width="50px" />)
+            for (let i = 0; i < playerCount * 2; i++) {
+              Colgroups.push(<col key={i} style={{width: 10}} />)
             }
             return (
               <colgroup>
