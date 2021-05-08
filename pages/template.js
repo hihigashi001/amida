@@ -1,12 +1,13 @@
 // liblary
 import { useState } from "react"
-
 // Componets
 import { PlayerHead } from "./components/user/PlayerHead"
 import { PriedFooder } from "./components/user/PriedFooder"
 import { BoderCount } from "./components/user/BoderCount"
 import { HideModal } from "./components/user/HideModal"
 import { HideModalSpace } from "./components/user/HideModalSpace"
+// function
+import { Random10 } from "../utility/function"
 
 export const template = () => {
     const [opacity ,setOpacity] = useState(true)
@@ -21,6 +22,7 @@ export const template = () => {
     const pried8 = "✕"
     const pried9 = "✕"
     const pried10 = "✕"
+    console.log(Random10())
     return (
         <div>
             <div>
