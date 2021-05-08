@@ -1,6 +1,3 @@
-// shared Componets
-import { Colgroup } from "./Colgroup"
-
 export const PriedFooder = (props) => {
     const valueChange = (i) => {
         if (i == 0) {
@@ -28,7 +25,6 @@ export const PriedFooder = (props) => {
 
     return (
         <table className="w-full table-fixed">
-            <Colgroup />
             <tbody className="w-full">
                 {
                     (() => {
@@ -37,7 +33,7 @@ export const PriedFooder = (props) => {
                             thTagCreate.push(
                                 <th key={i} className="px-2" colSpan="2">
                                     <p
-                                        className="appearance-none w-full border border-primary hover:border-primary p-4 rounded placeholder-gray-400 text-gray-700 focus:outline-none focus:ring-2 focus:ring-secondary focus:ring-opacity-75 focus:bg-hover text-sm"
+                                        className="text-gray-700 text-lg"
                                         name={"Player" + String(i + 1)}
                                     >{valueChange(i)}</p>
                                 </th>)

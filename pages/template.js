@@ -1,18 +1,16 @@
 // liblary
 import { useState } from "react"
 
-// shared Componets
-
 // Componets
-import { Colgroup } from "./components/user/Colgroup"
 import { PlayerHead } from "./components/user/PlayerHead"
 import { PriedFooder } from "./components/user/PriedFooder"
 import { BoderCount } from "./components/user/BoderCount"
 import { HideModal } from "./components/user/HideModal"
 import { HideModalSpace } from "./components/user/HideModalSpace"
 
-const template = () => {
-    const count = 5
+export const template = () => {
+    const [opacity ,setOpacity] = useState(true)
+    const count = 4
     const pried1 = "◎当たり"
     const pried2 = "✕"
     const pried3 = "◎当たり"
@@ -28,11 +26,10 @@ const template = () => {
             <div>
                 <h1 className="text-xl text-gray-700">あみだくじユーザページ</h1>
             </div>
-            <div className="p-8">
+            <div className="p-12">
                 <PlayerHead playerCount={count} />
                 <div className="relative">
                     <table className="w-full table-fixed my-4 absolute">
-                        <Colgroup playerCount={count}/>
                         <tbody className="w-full">
                             <BoderCount playerCount={count} />
                             <BoderCount playerCount={count} />
@@ -49,12 +46,12 @@ const template = () => {
                 </div>
                 <div className="relative">
                     <HideModalSpace playerCount={count} />
-                    <HideModal playerCount={count} />
-                    <HideModal playerCount={count} />
-                    <HideModal playerCount={count} />
-                    <HideModal playerCount={count} />
-                    <HideModal playerCount={count} />
-                    <HideModal playerCount={count} />
+                    <HideModal playerCount={count} opacity={opacity}/>
+                    <HideModal playerCount={count} opacity={opacity}/>
+                    <HideModal playerCount={count} opacity={opacity}/>
+                    <HideModal playerCount={count} opacity={opacity}/>
+                    <HideModal playerCount={count} opacity={opacity}/>
+                    <HideModal playerCount={count} opacity={opacity}/>
                     <HideModalSpace playerCount={count} />
                 </div>
                 <PriedFooder

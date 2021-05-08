@@ -1,10 +1,6 @@
-// shared Componets
-import { Colgroup } from "./Colgroup"
-
 export const HideModalSpace = ({ playerCount }) => {
     return (
         <table className="w-full table-fixed">
-            <Colgroup />
             <tbody className="w-full">
                 {
                     (() => {

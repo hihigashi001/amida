@@ -1,16 +1,20 @@
-// shared Componets
-import { Colgroup } from "./Colgroup"
+import cc from "classcat";
 
-export const HideModal = ({ playerCount }) => {
+export const HideModal = (props) => {
+    const className = cc([
+        "bg-blue-900 p-4 text-xs",
+        {
+          "opacity-0": props.opacity === true,
+        },
+      ]);
     return (
         <table className="w-full table-fixed">
-            <Colgroup />
             <tbody className="w-full">
                 {
                     (() => {
                         const thTagCreate = [];
-                        for (let i = 0; i < playerCount; i++) {
-                            thTagCreate.push(<th key={i} className="bg-blue-900 p-4 text-xs border-blue-900" colSpan="2">　</th>)
+                        for (let i = 0; i < props.playerCount; i++) {
+                            thTagCreate.push(<th key={i} className={className} colSpan="2">　</th>)
                         }
                         return (
                             <tr className="w-full">
