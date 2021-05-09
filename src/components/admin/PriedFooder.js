@@ -1,6 +1,3 @@
-// shared Componets
-import { Colgroup } from "src/components/shared/Colgroup"
-
 export const PriedFooder = (props) => {
     const valueChange = (i) => {
         if (i == 0) {
@@ -50,7 +47,6 @@ export const PriedFooder = (props) => {
     }
     return (
         <table className="w-full table-fixed">
-            <Colgroup />
             <tbody className="w-full">
                 {
                     (() => {
@@ -65,9 +61,6 @@ export const PriedFooder = (props) => {
                                         onChange={(event) => handleOnChange(event, i)}
                                     ></input>
                                 </th>)
-                        }
-                        for (let i = props.playerCount; i < 10; i++) {
-                            thTagCreate.push(<th key={i} colSpan="2">　</th>)
                         }
                         return (
                             <tr className="w-full">

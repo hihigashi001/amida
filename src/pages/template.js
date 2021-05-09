@@ -11,7 +11,7 @@ import { Random10 } from "src/utility/function"
 
 export const template = () => {
     const [opacity ,setOpacity] = useState(false)
-    const count = 4
+    const count = 5
     const pried1 = "◎当たり"
     const pried2 = "✕"
     const pried3 = "◎当たり"

@@ -3,7 +3,6 @@ import { useState } from "react"
 
 // shared Componets
 import { Button } from "src/components/shared/Button"
-import { Colgroup } from "src/components/shared/Colgroup"
 
 // Componets
 import { PlayerHead } from "src/components/admin/PlayerHead"
@@ -55,7 +54,6 @@ const Home = () => {
         <PlayerHead playerCount={count} />
         <div className="relative">
           <table className="w-full table-fixed my-4 absolute">
-            <Colgroup />
             <tbody className="w-full">
               <BoderCount playerCount={count} />
               <BoderCount playerCount={count} />
