@@ -10,7 +10,7 @@ import { HideModalSpace } from "src/components/user/HideModalSpace"
 import { Random10 } from "src/utility/function"
 
 export const template = () => {
-    const [opacity ,setOpacity] = useState(true)
+    const [opacity ,setOpacity] = useState(false)
     const count = 4
     const pried1 = "◎当たり"
     const pried2 = "✕"

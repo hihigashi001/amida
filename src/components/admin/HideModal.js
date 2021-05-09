@@ -3,7 +3,7 @@ import { Colgroup } from "src/components/shared/Colgroup"
 
 export const HideModal = ({ playerCount }) => {
     return (
-        <table className="w-full table-fixed">
+        <table className="w-full table-fixed border-collapse border-spacing-0 bg-blue-900">
             <Colgroup />
             <tbody className="w-full">
                 {
