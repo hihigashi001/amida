@@ -5,7 +5,6 @@ export const BoderCount10 = ({ playerCount, random }) => {
         "border-l-4 border-r-4 border-gray-700 h-8",
     ]);
     const playerCounts = playerCount - 2
-    console.log(random)
     return (
         <tr className="w-full">
             <th colSpan="1"></th>

@@ -15,6 +15,7 @@ import { BoderCount7 } from "src/components/user/BoderCount7"
 import { BoderCount8 } from "src/components/user/BoderCount8"
 import { BoderCount9 } from "src/components/user/BoderCount9"
 import { BoderCount10 } from "src/components/user/BoderCount10"
+import { Button } from "src/components/shared/Button"
 // function
 import { Random10 } from "src/utility/function"
 
@@ -36,6 +37,7 @@ export const template = () => {
         <div>
             <div>
                 <h1 className="text-xl text-gray-700">あみだくじユーザページ</h1>
+                <Button onClick={() => setOpacity(!opacity)}>表示切替ボタン</Button>
             </div>
             <div className="p-12">
                 <PlayerHead playerCount={count} />

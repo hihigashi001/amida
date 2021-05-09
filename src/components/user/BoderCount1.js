@@ -32,7 +32,6 @@ export const BoderCount1 = ({ playerCount, random }) => {
         },
     ]);
     const playerCounts = playerCount - 2
-    console.log(random)
     return (
         <tr className="w-full">
             <th colSpan="1"></th>
