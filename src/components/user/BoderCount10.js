@@ -1,14 +1,20 @@
-export const BoderCount = ({ playerCount }) => {
+import cc from "classcat";
+
+export const BoderCount10 = ({ playerCount, random }) => {
+    const className0 = cc([
+        "border-l-4 border-r-4 border-gray-700 h-8",
+    ]);
     const playerCounts = playerCount - 2
+    console.log(random)
     return (
         <tr className="w-full">
             <th colSpan="1"></th>
-            <th className="border-l-4 border-r-4 border-gray-700 h-8" colSpan="2"></th>
+            <th className={className0} colSpan="2"></th>
             {
                 (() => {
                     const thTagCreate = [];
                     for (let i = 0; i < playerCounts; i++) {
-                        thTagCreate.push(<th key={i} className="border-r-4 border-gray-700 h-8" colSpan="2"></th>)
+                            thTagCreate.push(<th key={i} className="border-r-4 border-gray-700 h-8" colSpan="2"></th>)
                     }
                     return (
                         <>

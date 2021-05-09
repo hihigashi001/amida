@@ -3,9 +3,18 @@ import { useState } from "react"
 // Componets
 import { PlayerHead } from "src/components/user/PlayerHead"
 import { PriedFooder } from "src/components/user/PriedFooder"
-import { BoderCount } from "src/components/user/BoderCount"
 import { HideModal } from "src/components/user/HideModal"
 import { HideModalSpace } from "src/components/user/HideModalSpace"
+import { BoderCount1 } from "src/components/user/BoderCount1"
+import { BoderCount2 } from "src/components/user/BoderCount2"
+import { BoderCount3 } from "src/components/user/BoderCount3"
+import { BoderCount4 } from "src/components/user/BoderCount4"
+import { BoderCount5 } from "src/components/user/BoderCount5"
+import { BoderCount6 } from "src/components/user/BoderCount6"
+import { BoderCount7 } from "src/components/user/BoderCount7"
+import { BoderCount8 } from "src/components/user/BoderCount8"
+import { BoderCount9 } from "src/components/user/BoderCount9"
+import { BoderCount10 } from "src/components/user/BoderCount10"
 // function
 import { Random10 } from "src/utility/function"
 
@@ -22,7 +31,7 @@ export const template = () => {
     const pried8 = "✕"
     const pried9 = "✕"
     const pried10 = "✕"
-    console.log(Random10())
+    const random = Random10()
     return (
         <div>
             <div>
@@ -33,16 +42,16 @@ export const template = () => {
                 <div className="relative">
                     <table className="w-full table-fixed my-4 absolute">
                         <tbody className="w-full">
-                            <BoderCount playerCount={count} />
-                            <BoderCount playerCount={count} />
-                            <BoderCount playerCount={count} />
-                            <BoderCount playerCount={count} />
-                            <BoderCount playerCount={count} />
-                            <BoderCount playerCount={count} />
-                            <BoderCount playerCount={count} />
-                            <BoderCount playerCount={count} />
-                            <BoderCount playerCount={count} />
-                            <BoderCount playerCount={count} />
+                            <BoderCount1 playerCount={count} random={random}/>
+                            <BoderCount2 playerCount={count} random={random}/>
+                            <BoderCount3 playerCount={count} random={random}/>
+                            <BoderCount4 playerCount={count} random={random}/>
+                            <BoderCount5 playerCount={count} random={random}/>
+                            <BoderCount6 playerCount={count} random={random}/>
+                            <BoderCount7 playerCount={count} random={random}/>
+                            <BoderCount8 playerCount={count} random={random}/>
+                            <BoderCount9 playerCount={count} random={random}/>
+                            <BoderCount10 playerCount={count} random={random}/>
                         </tbody>
                     </table>
                 </div>
