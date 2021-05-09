@@ -2,15 +2,15 @@
 import { useState } from "react"
 
 // shared Componets
-import { Button } from "../components/shared/Button"
-import { Colgroup } from "../components/shared/Colgroup"
+import { Button } from "src/components/shared/Button"
+import { Colgroup } from "src/components/shared/Colgroup"
 
 // Componets
-import { PlayerHead } from "../components/admin/PlayerHead"
-import { PriedFooder } from "../components/admin/PriedFooder"
-import { BoderCount } from "../components/admin/BoderCount"
-import { HideModal } from "../components/admin/HideModal"
-import { HideModalSpace } from "../components/admin/HideModalSpace"
+import { PlayerHead } from "src/components/admin/PlayerHead"
+import { PriedFooder } from "src/components/admin/PriedFooder"
+import { BoderCount } from "src/components/admin/BoderCount"
+import { HideModal } from "src/components/admin/HideModal"
+import { HideModalSpace } from "src/components/admin/HideModalSpace"
 
 const Home = () => {
   const [count, setCount] = useState(10)

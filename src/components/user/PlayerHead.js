@@ -1,4 +1,4 @@
-import { Button } from "../shared/Button"
+import { Button } from "src/components/shared/Button"
 
 export const PlayerHead = ({ playerCount }) => {
     return (

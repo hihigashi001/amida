@@ -1,13 +1,13 @@
 // liblary
 import { useState } from "react"
 // Componets
-import { PlayerHead } from "../components/user/PlayerHead"
-import { PriedFooder } from "../components/user/PriedFooder"
-import { BoderCount } from "../components/user/BoderCount"
-import { HideModal } from "../components/user/HideModal"
-import { HideModalSpace } from "../components/user/HideModalSpace"
+import { PlayerHead } from "src/components/user/PlayerHead"
+import { PriedFooder } from "src/components/user/PriedFooder"
+import { BoderCount } from "src/components/user/BoderCount"
+import { HideModal } from "src/components/user/HideModal"
+import { HideModalSpace } from "src/components/user/HideModalSpace"
 // function
-import { Random10 } from "../utility/function"
+import { Random10 } from "src/utility/function"
 
 export const template = () => {
     const [opacity ,setOpacity] = useState(true)
