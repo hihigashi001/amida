@@ -1,6 +1,6 @@
 import cc from "classcat";
 
-export const BoderCount10 = ({ playerCount, random }) => {
+export const BoderCount10 = ({ playerCount }) => {
     const className0 = cc([
         "border-l-4 border-r-4 border-gray-700 h-8",
     ]);

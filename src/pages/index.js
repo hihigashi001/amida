@@ -5,11 +5,11 @@ import { useState } from "react"
 import { Button } from "src/components/shared/Button"
 
 // Componets
-import { PlayerHead } from "src/components/admin/PlayerHead"
-import { PriedFooder } from "src/components/admin/PriedFooder"
-import { BoderCount } from "src/components/admin/BoderCount"
-import { HideModal } from "src/components/admin/HideModal"
-import { HideModalSpace } from "src/components/admin/HideModalSpace"
+import { PlayerHead } from "src/components/index/PlayerHead"
+import { PriedFooder } from "src/components/index/PriedFooder"
+import { BoderCount } from "src/components/index/BoderCount"
+import { HideModal } from "src/components/index/HideModal"
+import { HideModalSpace } from "src/components/index/HideModalSpace"
 
 const Home = () => {
   const [count, setCount] = useState(10)
