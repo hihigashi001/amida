@@ -1,5 +1,5 @@
 // liblary
-import { useState, useMemo } from "react"
+import { useState, useMemo, useEffect } from "react"
 // Componets
 import { PlayerHead } from "src/components/user/PlayerHead"
 import { PriedFooder } from "src/components/user/PriedFooder"
@@ -15,13 +15,12 @@ import { BoderCount7 } from "src/components/user/BoderCount/BoderCount7"
 import { BoderCount8 } from "src/components/user/BoderCount/BoderCount8"
 import { BoderCount9 } from "src/components/user/BoderCount/BoderCount9"
 import { BoderCount10 } from "src/components/user/BoderCount/BoderCount10"
-import { Button } from "src/components/shared/Button"
 // function
 import { Random10 } from "src/utility/function"
 
 export const user = () => {
     const [opacity, setOpacity] = useState(false)
-    const count = 6
+    const count = 8
     const pried1 = "◎当たり"
     const pried2 = "✕"
     const pried3 = "◎当たり"
@@ -43,11 +42,25 @@ export const user = () => {
     const [player8, setPlayer8] = useState("")
     const [player9, setPlayer9] = useState("")
     const [player10, setPlayer10] = useState("")
+    const opacityChange = () => {
+        if (count == 1 && player1 !== "") setOpacity(true)
+        if (count == 2 && player1 !== "" && player2 !== "") setOpacity(true)
+        if (count == 3 && player1 !== "" && player2 !== "" && player3 !== "") setOpacity(true)
+        if (count == 4 && player1 !== "" && player2 !== "" && player3 !== "" && player4 !== "") setOpacity(true)
+        if (count == 5 && player1 !== "" && player2 !== "" && player3 !== "" && player4 !== "" && player5 !== "") setOpacity(true)
+        if (count == 6 && player1 !== "" && player2 !== "" && player3 !== "" && player4 !== "" && player5 !== "" && player6 !== "") setOpacity(true)
+        if (count == 7 && player1 !== "" && player2 !== "" && player3 !== "" && player4 !== "" && player5 !== "" && player6 !== "" && player7 !== "") setOpacity(true)
+        if (count == 8 && player1 !== "" && player2 !== "" && player3 !== "" && player4 !== "" && player5 !== "" && player6 !== "" && player7 !== "" && player8 !== "") setOpacity(true)
+        if (count == 9 && player1 !== "" && player2 !== "" && player3 !== "" && player4 !== "" && player5 !== "" && player6 !== "" && player7 !== "" && player8 !== "" && player9 !== "") setOpacity(true)
+        if (count == 10 && player1 !== "" && player2 !== "" && player3 !== "" && player4 !== "" && player5 !== "" && player6 !== "" && player7 !== "" && player8 !== "" && player9 !== "" && player10 !== "") setOpacity(true)
+    }
+    useEffect(() => {
+        opacityChange()
+    }, [player1, player2, player3, player4, player5, player6, player7, player8, player9, player10])
     return (
         <div>
             <div>
                 <h1 className="text-xl text-gray-700">あみだくじユーザページ</h1>
-                <Button onClick={() => setOpacity(!opacity)}>表示切替ボタン</Button>
             </div>
             <div className="p-12">
                 <PlayerHead
