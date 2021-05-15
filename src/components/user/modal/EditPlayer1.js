@@ -4,8 +4,10 @@ import { Button } from "src/components/shared/Button"
 import { customStyles } from "./customStyles"
 import { useForm } from "react-hook-form";
 import cc from "classcat";
+import { selectAmidakuji, putPlayer1, fetchAmida } from "src/redux/amidaSlice";
+import { useSelector, useDispatch } from "react-redux";
 
-export const EditPlayer1 = (props) => {
+export const EditPlayer1 = () => {
     const InputClassName = cc([
         "shadow-lg mt-2 block appearance-none w-full border border-grey-light hover:border-primary px-2 py-2 rounded placeholder-gray-400 text-gray-700 focus:outline-none focus:ring-2 focus:ring-secondary focus:ring-opacity-75 focus:bg-hover text-sm",
     ]);
@@ -16,8 +18,12 @@ export const EditPlayer1 = (props) => {
         "shadow-lg bg-primary hover:bg-secondary text-white font-bold text-sm focus:outline-none rounded-3xl p-4 m-2",
     ]);
     const { register, handleSubmit } = useForm();
-    const onSubmit = data => {
-        props.setPlayer1(data.playerName);
+    const dispatch = useDispatch();
+    const Admidakuji = useSelector(selectAmidakuji)
+    const onSubmit = ( data ) => {
+        const sendData = { ...Admidakuji, player1: data.playerName}
+        putPlayer1(sendData)
+        dispatch(fetchAmida());
         hideModal();
     }
     const [showModal, hideModal] = useModal(() => (

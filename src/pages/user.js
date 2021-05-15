@@ -1,5 +1,5 @@
 // liblary
-import { useState, useMemo, useEffect } from "react"
+import { useState, useEffect } from "react"
 import { useSelector } from "react-redux";
 // Componets
 import { PlayerHead } from "src/components/user/PlayerHead"
@@ -16,8 +16,6 @@ import { BoderCount7 } from "src/components/user/BoderCount/BoderCount7"
 import { BoderCount8 } from "src/components/user/BoderCount/BoderCount8"
 import { BoderCount9 } from "src/components/user/BoderCount/BoderCount9"
 import { BoderCount10 } from "src/components/user/BoderCount/BoderCount10"
-// function
-import { Random10 } from "src/utility/function"
 // redux
 import { 
     fetchAmida,
@@ -41,29 +39,16 @@ export const user = () => {
     const pried9 = amidaData.pried9
     const pried10 = amidaData.pried10
     const random = amidaData.random
-
-    // const count = 8
-    // const pried1 = "◎当たり"
-    // const pried2 = "✕"
-    // const pried3 = "◎当たり"
-    // const pried4 = "✕"
-    // const pried5 = "✕"
-    // const pried6 = "✕"
-    // const pried7 = "✕"
-    // const pried8 = "✕"
-    // const pried9 = "✕"
-    // const pried10 = "✕"
-    // const random = useMemo(() => Random10(), [])
-    const [player1, setPlayer1] = useState("")
-    const [player2, setPlayer2] = useState("")
-    const [player3, setPlayer3] = useState("")
-    const [player4, setPlayer4] = useState("")
-    const [player5, setPlayer5] = useState("")
-    const [player6, setPlayer6] = useState("")
-    const [player7, setPlayer7] = useState("")
-    const [player8, setPlayer8] = useState("")
-    const [player9, setPlayer9] = useState("")
-    const [player10, setPlayer10] = useState("")
+    const player1 = amidaData.player1
+    const player2 = amidaData.player2
+    const player3 = amidaData.player3
+    const player4 = amidaData.player4
+    const player5 = amidaData.player5
+    const player6 = amidaData.player6
+    const player7 = amidaData.player7
+    const player8 = amidaData.player8
+    const player9 = amidaData.player9
+    const player10 = amidaData.player10
     const opacityChange = () => {
         if (count == 1 && player1 !== "") setOpacity(true)
         if (count == 2 && player1 !== "" && player2 !== "") setOpacity(true)
@@ -86,6 +71,10 @@ export const user = () => {
           };
           getData();
     }, [])
+    const reload = () => {
+        dispatch(fetchAmida());
+    };
+    setInterval(reload, 10000);
     return (
         <div>
             <div>
@@ -104,16 +93,6 @@ export const user = () => {
                     player8={player8}
                     player9={player9}
                     player10={player10}
-                    setPlayer1={setPlayer1}
-                    setPlayer2={setPlayer2}
-                    setPlayer3={setPlayer3}
-                    setPlayer4={setPlayer4}
-                    setPlayer5={setPlayer5}
-                    setPlayer6={setPlayer6}
-                    setPlayer7={setPlayer7}
-                    setPlayer8={setPlayer8}
-                    setPlayer9={setPlayer9}
-                    setPlayer10={setPlayer10}
                 />
                 <div className="relative">
                     <table className="w-full table-fixed my-4 absolute">

@@ -66,13 +66,112 @@ export const fetchAmida = createAsyncThunk('amida/getAmida', async () => {
 })
 
 // Player編集
-export const editPlayer = async ({ submitData }) => {
-    const { id, player1, player2, player3, player4, player5, player6, player7, player8, player9, player10 } = submitData;
+export const putPlayer1 = async (props) => {
+    const { id, player1 } = props;
     try {
         await db
             .collection('amidakuji')
             .doc(id)
-            .set({ player1, player2, player3, player4, player5, player6, player7, player8, player9, player10 }, { merge: true });
+            .set({ player1 }, { merge: true });
+    } catch (err) {
+        console.log('Error updating document:', err);
+    }
+};
+export const putPlayer2 = async (props) => {
+    const { id, player2 } = props;
+    try {
+        await db
+            .collection('amidakuji')
+            .doc(id)
+            .set({ player2 }, { merge: true });
+    } catch (err) {
+        console.log('Error updating document:', err);
+    }
+};
+export const putPlayer3 = async (props) => {
+    const { id, player3 } = props;
+    try {
+        await db
+            .collection('amidakuji')
+            .doc(id)
+            .set({ player3 }, { merge: true });
+    } catch (err) {
+        console.log('Error updating document:', err);
+    }
+};
+export const putPlayer4 = async (props) => {
+    const { id, player4 } = props;
+    try {
+        await db
+            .collection('amidakuji')
+            .doc(id)
+            .set({ player4 }, { merge: true });
+    } catch (err) {
+        console.log('Error updating document:', err);
+    }
+};
+export const putPlayer5 = async (props) => {
+    const { id, player5 } = props;
+    try {
+        await db
+            .collection('amidakuji')
+            .doc(id)
+            .set({ player5 }, { merge: true });
+    } catch (err) {
+        console.log('Error updating document:', err);
+    }
+};
+export const putPlayer6 = async (props) => {
+    const { id, player6 } = props;
+    try {
+        await db
+            .collection('amidakuji')
+            .doc(id)
+            .set({ player6 }, { merge: true });
+    } catch (err) {
+        console.log('Error updating document:', err);
+    }
+};
+export const putPlayer7 = async (props) => {
+    const { id, player7 } = props;
+    try {
+        await db
+            .collection('amidakuji')
+            .doc(id)
+            .set({ player7 }, { merge: true });
+    } catch (err) {
+        console.log('Error updating document:', err);
+    }
+};
+export const putPlayer8 = async (props) => {
+    const { id, player8 } = props;
+    try {
+        await db
+            .collection('amidakuji')
+            .doc(id)
+            .set({ player8 }, { merge: true });
+    } catch (err) {
+        console.log('Error updating document:', err);
+    }
+};
+export const putPlayer9 = async (props) => {
+    const { id, player9 } = props;
+    try {
+        await db
+            .collection('amidakuji')
+            .doc(id)
+            .set({ player9 }, { merge: true });
+    } catch (err) {
+        console.log('Error updating document:', err);
+    }
+};
+export const putPlayer10 = async (props) => {
+    const { id, player10 } = props;
+    try {
+        await db
+            .collection('amidakuji')
+            .doc(id)
+            .set({ player10 }, { merge: true });
     } catch (err) {
         console.log('Error updating document:', err);
     }
