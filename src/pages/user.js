@@ -18,7 +18,7 @@ import { BoderCount9 } from "src/components/user/BoderCount/BoderCount9"
 import { BoderCount10 } from "src/components/user/BoderCount/BoderCount10"
 // redux
 import {
-    fetchAmida,
+    fetchAmidaUrl,
     selectAmidakuji,
 } from "src/redux/amidaSlice"
 import { useDispatch } from 'react-redux'
@@ -67,10 +67,10 @@ export const user = () => {
     useEffect(() => {
         opacityChange()
     }, [player1, player2, player3, player4, player5, player6, player7, player8, player9, player10])
-    
+
     useEffect(() => {
         const getData = () => {
-            dispatch(fetchAmida());
+            dispatch(fetchAmidaUrl());
         };
         getData();
     }, [])
@@ -78,7 +78,7 @@ export const user = () => {
     useEffect(() => {
         if (id !== "") {
         db.collection("amidakuji").doc(id).onSnapshot(() => {
-            dispatch(fetchAmida())
+            dispatch(fetchAmidaUrl())
         }
         )};
     }, [id]);

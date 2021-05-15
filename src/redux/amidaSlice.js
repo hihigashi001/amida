@@ -30,12 +30,10 @@ const init = {
     }
 }
 
-
-// あみだページ情報の取得(配列の0番)
-// あみだページ情報の取得(URLから)　⇒ほんとはこれやりたい。
-export const fetchAmida = createAsyncThunk('amida/getAmida', async () => {
-    const res = await db.collection('amidakuji').get()
-    const amidas = res.docs.map((doc) => ({
+// あみだページ情報の取得(URLから)
+export const fetchAmidaUrl = createAsyncThunk('amida/getAmida', async () => {
+    const res = await db.collection('amidakuji').where("URL", "==", "111").get()
+    const amida = res.docs.map((doc) => ({
         id: doc.id,
         url: doc.data().URL,
         count: Number(doc.data().count),
@@ -62,7 +60,7 @@ export const fetchAmida = createAsyncThunk('amida/getAmida', async () => {
         pried10: doc.data().pried10,
     })
     )
-    return amidas[0]
+    return amida[0]
 })
 
 // Player編集
@@ -185,10 +183,10 @@ const amidaSlice = createSlice({
     initialState: init,
     reducers: {},
     extraReducers: (builder) => {
-        builder.addCase(fetchAmida.fulfilled, (state, action) => {
+        builder.addCase(fetchAmidaUrl.fulfilled, (state, action) => {
             state.amidakuji = action.payload;
         })
-        builder.addCase(fetchAmida.rejected, (state, action) => {
+        builder.addCase(fetchAmidaUrl.rejected, (state, action) => {
             console.log("データ取得に失敗しました。")
         })
     }
