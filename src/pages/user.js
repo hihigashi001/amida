@@ -17,17 +17,19 @@ import { BoderCount8 } from "src/components/user/BoderCount/BoderCount8"
 import { BoderCount9 } from "src/components/user/BoderCount/BoderCount9"
 import { BoderCount10 } from "src/components/user/BoderCount/BoderCount10"
 // redux
-import { 
+import {
     fetchAmida,
     selectAmidakuji,
- } from "src/redux/amidaSlice"
- import { useDispatch } from 'react-redux';
+} from "src/redux/amidaSlice"
+import { useDispatch } from 'react-redux'
+import { db } from "src/utility/firebase"
 
 export const user = () => {
     const amidaData = useSelector(selectAmidakuji);
     const dispatch = useDispatch();
     const [opacity, setOpacity] = useState(false)
-    const count = Number(amidaData.count)
+    const id = amidaData.id
+    const count = amidaData.count
     const pried1 = amidaData.pried1
     const pried2 = amidaData.pried2
     const pried3 = amidaData.pried3
@@ -65,16 +67,22 @@ export const user = () => {
     useEffect(() => {
         opacityChange()
     }, [player1, player2, player3, player4, player5, player6, player7, player8, player9, player10])
+    
     useEffect(() => {
         const getData = () => {
             dispatch(fetchAmida());
-          };
-          getData();
+        };
+        getData();
     }, [])
-    const reload = () => {
-        dispatch(fetchAmida());
-    };
-    setInterval(reload, 10000);
+
+    useEffect(() => {
+        if (id !== "") {
+        db.collection("amidakuji").doc(id).onSnapshot(() => {
+            dispatch(fetchAmida())
+        }
+        )};
+    }, [id]);
+
     return (
         <div>
             <div>

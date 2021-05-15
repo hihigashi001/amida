@@ -23,7 +23,6 @@ export const EditPlayer3 = () => {
     const onSubmit = ( data ) => {
         const sendData = { ...Admidakuji, player3: data.playerName}
         putPlayer3(sendData)
-        dispatch(fetchAmida());
         hideModal();
     }
     const [showModal, hideModal] = useModal(() => (

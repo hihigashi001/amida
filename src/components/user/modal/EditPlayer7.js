@@ -4,7 +4,7 @@ import { Button } from "src/components/shared/Button"
 import { customStyles } from "./customStyles"
 import { useForm } from "react-hook-form";
 import cc from "classcat";
-import { selectAmidakuji, putPlayer7, fetchAmida } from "src/redux/amidaSlice";
+import { selectAmidakuji, putPlayer7 } from "src/redux/amidaSlice";
 import { useSelector, useDispatch } from "react-redux";
 
 export const EditPlayer7 = () => {
@@ -23,7 +23,6 @@ export const EditPlayer7 = () => {
     const onSubmit = ( data ) => {
         const sendData = { ...Admidakuji, player7: data.playerName}
         putPlayer7(sendData)
-        dispatch(fetchAmida());
         hideModal();
     }
     const [showModal, hideModal] = useModal(() => (

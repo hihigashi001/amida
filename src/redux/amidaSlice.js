@@ -38,7 +38,7 @@ export const fetchAmida = createAsyncThunk('amida/getAmida', async () => {
     const amidas = res.docs.map((doc) => ({
         id: doc.id,
         url: doc.data().URL,
-        count: doc.data().count,
+        count: Number(doc.data().count),
         random: doc.data().random,
         player1: doc.data().player1,
         player2: doc.data().player2,
