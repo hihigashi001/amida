@@ -1,5 +1,6 @@
 // liblary
 import { useState, useMemo, useEffect } from "react"
+import { useSelector } from "react-redux";
 // Componets
 import { PlayerHead } from "src/components/user/PlayerHead"
 import { PriedFooder } from "src/components/user/PriedFooder"
@@ -17,21 +18,42 @@ import { BoderCount9 } from "src/components/user/BoderCount/BoderCount9"
 import { BoderCount10 } from "src/components/user/BoderCount/BoderCount10"
 // function
 import { Random10 } from "src/utility/function"
+// redux
+import { 
+    fetchAmida,
+    selectAmidakuji,
+ } from "src/redux/amidaSlice"
+ import { useDispatch } from 'react-redux';
 
 export const user = () => {
+    const amidaData = useSelector(selectAmidakuji);
+    const dispatch = useDispatch();
     const [opacity, setOpacity] = useState(false)
-    const count = 8
-    const pried1 = "◎当たり"
-    const pried2 = "✕"
-    const pried3 = "◎当たり"
-    const pried4 = "✕"
-    const pried5 = "✕"
-    const pried6 = "✕"
-    const pried7 = "✕"
-    const pried8 = "✕"
-    const pried9 = "✕"
-    const pried10 = "✕"
-    const random = useMemo(() => Random10(), [])
+    const count = Number(amidaData.count)
+    const pried1 = amidaData.pried1
+    const pried2 = amidaData.pried2
+    const pried3 = amidaData.pried3
+    const pried4 = amidaData.pried4
+    const pried5 = amidaData.pried5
+    const pried6 = amidaData.pried6
+    const pried7 = amidaData.pried7
+    const pried8 = amidaData.pried8
+    const pried9 = amidaData.pried9
+    const pried10 = amidaData.pried10
+    const random = amidaData.random
+
+    // const count = 8
+    // const pried1 = "◎当たり"
+    // const pried2 = "✕"
+    // const pried3 = "◎当たり"
+    // const pried4 = "✕"
+    // const pried5 = "✕"
+    // const pried6 = "✕"
+    // const pried7 = "✕"
+    // const pried8 = "✕"
+    // const pried9 = "✕"
+    // const pried10 = "✕"
+    // const random = useMemo(() => Random10(), [])
     const [player1, setPlayer1] = useState("")
     const [player2, setPlayer2] = useState("")
     const [player3, setPlayer3] = useState("")
@@ -54,9 +76,16 @@ export const user = () => {
         if (count == 9 && player1 !== "" && player2 !== "" && player3 !== "" && player4 !== "" && player5 !== "" && player6 !== "" && player7 !== "" && player8 !== "" && player9 !== "") setOpacity(true)
         if (count == 10 && player1 !== "" && player2 !== "" && player3 !== "" && player4 !== "" && player5 !== "" && player6 !== "" && player7 !== "" && player8 !== "" && player9 !== "" && player10 !== "") setOpacity(true)
     }
+
     useEffect(() => {
         opacityChange()
     }, [player1, player2, player3, player4, player5, player6, player7, player8, player9, player10])
+    useEffect(() => {
+        const getData = () => {
+            dispatch(fetchAmida());
+          };
+          getData();
+    }, [])
     return (
         <div>
             <div>

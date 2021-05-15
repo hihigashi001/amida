@@ -4,11 +4,16 @@ import { ModalProvider } from "react-modal-hook"
 
 ReactModal.setAppElement('#__next')
 
+import store from '../redux/store'
+import { Provider } from 'react-redux'
+
 function MyApp({ Component, pageProps }) {
   return (
-    <ModalProvider>
-      <Component {...pageProps} />
-    </ModalProvider>
+    <Provider store={store}>
+      <ModalProvider>
+        <Component {...pageProps} />
+      </ModalProvider>
+    </Provider>
   )
 }
 
