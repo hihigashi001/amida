@@ -25,6 +25,9 @@ import {
 import { useDispatch } from 'react-redux'
 import { db } from "src/utility/firebase"
 
+// layout
+import { UserLayout } from "src/layouts/UserLayout"
+
 
 export const user = ({ query }) => {
     const amidaData = useSelector(selectAmidakuji);
@@ -88,65 +91,68 @@ export const user = ({ query }) => {
     }, [id]);
 
     return (
-        <div>
+        <UserLayout>
             <div>
-                <h1 className="text-xl text-gray-700">{title}</h1>
-            </div>
-            <div className="p-12">
-                <PlayerHead
-                    playerCount={count}
-                    player1={player1}
-                    player2={player2}
-                    player3={player3}
-                    player4={player4}
-                    player5={player5}
-                    player6={player6}
-                    player7={player7}
-                    player8={player8}
-                    player9={player9}
-                    player10={player10}
-                />
-                <div className="relative">
-                    <table className="w-full table-fixed my-4 absolute">
-                        <tbody className="w-full">
-                            <BoderCount1 playerCount={count} random={random} />
-                            <BoderCount2 playerCount={count} random={random} />
-                            <BoderCount3 playerCount={count} random={random} />
-                            <BoderCount4 playerCount={count} random={random} />
-                            <BoderCount5 playerCount={count} random={random} />
-                            <BoderCount6 playerCount={count} random={random} />
-                            <BoderCount7 playerCount={count} random={random} />
-                            <BoderCount8 playerCount={count} random={random} />
-                            <BoderCount9 playerCount={count} random={random} />
-                            <BoderCount10 playerCount={count} random={random} />
-                        </tbody>
-                    </table>
+                <div>
+                    <h1 className="text-xl text-gray-700">{title}</h1>
                 </div>
-                <div className="relative">
-                    <HideModalSpace playerCount={count} />
-                    <HideModal playerCount={count} opacity={opacity} />
-                    <HideModal playerCount={count} opacity={opacity} />
-                    <HideModal playerCount={count} opacity={opacity} />
-                    <HideModal playerCount={count} opacity={opacity} />
-                    <HideModal playerCount={count} opacity={opacity} />
-                    <HideModal playerCount={count} opacity={opacity} />
-                    <HideModalSpace playerCount={count} />
+                <div>{count} 名が選択したら公開されるよ</div>
+                <div className="p-12">
+                    <PlayerHead
+                        playerCount={count}
+                        player1={player1}
+                        player2={player2}
+                        player3={player3}
+                        player4={player4}
+                        player5={player5}
+                        player6={player6}
+                        player7={player7}
+                        player8={player8}
+                        player9={player9}
+                        player10={player10}
+                    />
+                    <div className="relative">
+                        <table className="w-full table-fixed my-4 absolute">
+                            <tbody className="w-full">
+                                <BoderCount1 playerCount={count} random={random} />
+                                <BoderCount2 playerCount={count} random={random} />
+                                <BoderCount3 playerCount={count} random={random} />
+                                <BoderCount4 playerCount={count} random={random} />
+                                <BoderCount5 playerCount={count} random={random} />
+                                <BoderCount6 playerCount={count} random={random} />
+                                <BoderCount7 playerCount={count} random={random} />
+                                <BoderCount8 playerCount={count} random={random} />
+                                <BoderCount9 playerCount={count} random={random} />
+                                <BoderCount10 playerCount={count} random={random} />
+                            </tbody>
+                        </table>
+                    </div>
+                    <div className="relative">
+                        <HideModalSpace playerCount={count} />
+                        <HideModal playerCount={count} opacity={opacity} />
+                        <HideModal playerCount={count} opacity={opacity} />
+                        <HideModal playerCount={count} opacity={opacity} />
+                        <HideModal playerCount={count} opacity={opacity} />
+                        <HideModal playerCount={count} opacity={opacity} />
+                        <HideModal playerCount={count} opacity={opacity} />
+                        <HideModalSpace playerCount={count} />
+                    </div>
+                    <PriedFooder
+                        playerCount={count}
+                        pried1={pried1}
+                        pried2={pried2}
+                        pried3={pried3}
+                        pried4={pried4}
+                        pried5={pried5}
+                        pried6={pried6}
+                        pried7={pried7}
+                        pried8={pried8}
+                        pried9={pried9}
+                        pried10={pried10}
+                    />
                 </div>
-                <PriedFooder
-                    playerCount={count}
-                    pried1={pried1}
-                    pried2={pried2}
-                    pried3={pried3}
-                    pried4={pried4}
-                    pried5={pried5}
-                    pried6={pried6}
-                    pried7={pried7}
-                    pried8={pried8}
-                    pried9={pried9}
-                    pried10={pried10}
-                />
             </div>
-        </div>
+        </UserLayout>
     )
 }
 

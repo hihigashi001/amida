@@ -6,7 +6,7 @@ export const UserLayout = (props) => {
         <>
             <main className="h-screen">
                 <Header />
-                {props.children}
+                <div className="px-4 mx-auto w-full max-w-screen-xl">{props.children}</div>
                 <Footer />
             </main>
         </>

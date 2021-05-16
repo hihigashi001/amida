@@ -11,10 +11,10 @@ ReactModal.setAppElement('#__next')
 const App = (props) => {
   return (
     <Provider store={store}>
-      <Head>
-        <title>あみだくじ</title>
-      </Head>
       <ModalProvider>
+        <Head>
+          <title>あみだくじ</title>
+        </Head>
         <props.Component {...props.pageProps} />
       </ModalProvider>
     </Provider>
