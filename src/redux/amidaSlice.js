@@ -31,8 +31,8 @@ const init = {
 }
 
 // あみだページ情報の取得(URLから)
-export const fetchAmidaUrl = createAsyncThunk('amida/getAmida', async () => {
-    const res = await db.collection('amidakuji').where("URL", "==", "111").get()
+export const fetchAmidaUrl = createAsyncThunk('amida/getAmida', async (getURL) => {
+    const res = await db.collection('amidakuji').where("url", "==", getURL).get()
     const amida = res.docs.map((doc) => ({
         id: doc.id,
         url: doc.data().URL,
@@ -205,9 +205,6 @@ const amidaSlice = createSlice({
     extraReducers: (builder) => {
         builder.addCase(fetchAmidaUrl.fulfilled, (state, action) => {
             state.amidakuji = action.payload;
-        })
-        builder.addCase(fetchAmidaUrl.rejected, (state, action) => {
-            console.log("データ取得に失敗しました。")
         })
     }
 });

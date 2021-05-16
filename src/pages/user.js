@@ -1,6 +1,7 @@
 // liblary
 import { useState, useEffect } from "react"
 import { useSelector } from "react-redux";
+
 // Componets
 import { PlayerHead } from "src/components/user/PlayerHead"
 import { PriedFooder } from "src/components/user/PriedFooder"
@@ -24,7 +25,8 @@ import {
 import { useDispatch } from 'react-redux'
 import { db } from "src/utility/firebase"
 
-export const user = () => {
+
+export const user = ({ query }) => {
     const amidaData = useSelector(selectAmidakuji);
     const dispatch = useDispatch();
     const [opacity, setOpacity] = useState(false)
@@ -70,17 +72,18 @@ export const user = () => {
 
     useEffect(() => {
         const getData = () => {
-            dispatch(fetchAmidaUrl());
+            dispatch(fetchAmidaUrl(query.page));
         };
         getData();
     }, [])
 
     useEffect(() => {
         if (id !== "") {
-        db.collection("amidakuji").doc(id).onSnapshot(() => {
-            dispatch(fetchAmidaUrl())
-        }
-        )};
+            db.collection("amidakuji").doc(id).onSnapshot(() => {
+                dispatch(fetchAmidaUrl(query.page))
+            }
+            )
+        };
     }, [id]);
 
     return (
@@ -144,6 +147,10 @@ export const user = () => {
             </div>
         </div>
     )
+}
+
+user.getInitialProps = ({ query }) => {
+    return { query }
 }
 
 
