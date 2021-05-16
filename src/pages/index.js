@@ -1,5 +1,6 @@
 // liblary
 import { useState } from "react"
+import { useRouter } from 'next/router'
 
 // shared Componets
 import { Button } from "src/components/shared/Button"
@@ -16,6 +17,7 @@ import { amidaCreate } from "src/redux/amidaSlice"
 import { Random10, RandomURL } from "src/utility/function"
 
 const Home = () => {
+  const router = useRouter()
   const [count, setCount] = useState(10)
   const [pried1, setPried1] = useState("◎当たり")
   const [pried2, setPried2] = useState("✕")
@@ -56,8 +58,11 @@ const Home = () => {
       pried8: pried8, 
       pried9: pried9, 
       pried10: pried10 
-    } 
-    amidaCreate(sendData)  
+    }
+    const pushPage = '/user?page=' + url
+    amidaCreate(sendData)
+    router.push(pushPage)
+
   }
 
   return (
