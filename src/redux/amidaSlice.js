@@ -4,6 +4,7 @@ import { db, dataNow } from "src/utility/firebase";
 const init = {
     amidakuji: {
         id: "",
+        title: "",
         url: "",
         count: "",
         random: "",
@@ -35,7 +36,8 @@ export const fetchAmidaUrl = createAsyncThunk('amida/getAmida', async (getURL) =
     const res = await db.collection('amidakuji').where("url", "==", getURL).get()
     const amida = res.docs.map((doc) => ({
         id: doc.id,
-        url: doc.data().URL,
+        title: doc.data().title,
+        url: doc.data().url,
         count: Number(doc.data().count),
         random: doc.data().random,
         player1: doc.data().player1,
@@ -177,7 +179,7 @@ export const putPlayer10 = async (props) => {
 
 // あみだ新規作成
 export const amidaCreate = async (props) => {
-    const { url, count, random, pried1, pried2, pried3, pried4, pried5, pried6, pried7, pried8, pried9, pried10 } = props;
+    const { title, url, count, random, pried1, pried2, pried3, pried4, pried5, pried6, pried7, pried8, pried9, pried10 } = props;
     const player1 = ""
     const player2 = ""
     const player3 = ""
@@ -192,7 +194,7 @@ export const amidaCreate = async (props) => {
     try {
         await db
             .collection('amidakuji')
-            .add({ url, count, random, pried1, pried2, pried3, pried4, pried5, pried6, pried7, pried8, pried9, pried10, player1, player2, player3, player4, player5, player6, player7, player8, player9, player10, createAt });
+            .add({ title, url, count, random, pried1, pried2, pried3, pried4, pried5, pried6, pried7, pried8, pried9, pried10, player1, player2, player3, player4, player5, player6, player7, player8, player9, player10, createAt });
     } catch (err) {
         console.log('Error add document:', err);
     }

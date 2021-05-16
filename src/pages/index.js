@@ -12,12 +12,14 @@ import { BoderCount } from "src/components/index/BoderCount"
 import { HideModal } from "src/components/index/HideModal"
 import { HideModalSpace } from "src/components/index/HideModalSpace"
 import { amidaCreate } from "src/redux/amidaSlice"
+import { TitleInput } from "src/components/index/TitleInput"
 
 // function
 import { Random10, RandomURL } from "src/utility/function"
 
 const Home = () => {
   const router = useRouter()
+  const [title, setTitle] = useState("あみだ題名")
   const [count, setCount] = useState(10)
   const [pried1, setPried1] = useState("◎当たり")
   const [pried2, setPried2] = useState("✕")
@@ -45,6 +47,7 @@ const Home = () => {
 
   const onClickCreate = () => {
     const sendData = {
+      title: title,
       url: url, 
       count: count, 
       random: random, 
@@ -68,7 +71,7 @@ const Home = () => {
   return (
     <div>
       <div>
-        <h1 className="text-xl text-gray-700">管理者ページ</h1>
+        <TitleInput value={title} onChange={(e) => setTitle(e.target.value)}/>
       </div>
       <div>
         <Button className="mx-2" onClick={onClickOneAdd}>+1</Button>

@@ -31,6 +31,7 @@ export const user = ({ query }) => {
     const dispatch = useDispatch();
     const [opacity, setOpacity] = useState(false)
     const id = amidaData.id
+    const title = amidaData.title
     const count = amidaData.count
     const pried1 = amidaData.pried1
     const pried2 = amidaData.pried2
@@ -89,7 +90,7 @@ export const user = ({ query }) => {
     return (
         <div>
             <div>
-                <h1 className="text-xl text-gray-700">あみだくじユーザページ</h1>
+                <h1 className="text-xl text-gray-700">{title}</h1>
             </div>
             <div className="p-12">
                 <PlayerHead
