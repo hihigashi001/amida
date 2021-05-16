@@ -3,13 +3,13 @@ import Header from "src/components/shared/Header";
 
 export const UserLayout = (props) => {
     return (
-        <>
-            <main className="h-screen">
-                <Header />
-                <div className="px-4 mx-auto w-full max-w-screen-xl">{props.children}</div>
-                <Footer />
+        <div className="h-full">
+            <Header />
+            <main className="container mx-auto p-2">
+                {props.children}
             </main>
-        </>
+            <Footer />
+        </div>
     )
 }
 

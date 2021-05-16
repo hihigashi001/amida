@@ -1,15 +1,14 @@
 export const TitleInput = (props) => {
     return (
-        <div className="py-2 px-4 inline-flex items-center justify-center rounded text-sm">
-            <div className="flex items-center rounded-full border border-gray-500 px-4">
-                <input
-                    className="rounded-l-full w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none bg-none"
-                    type="text"
-                    placeholder="タイトル"
-                    value={props.value}
-                    onChange={props.onChange}
-                />
-            </div>
-        </div>
+        <>
+            <label>タイトル</label>
+            <input
+                className="appearance-none w-full border border-primary hover:border-primary p-4 rounded placeholder-gray-400 text-gray-700 focus:outline-none focus:ring-2 focus:ring-secondary focus:ring-opacity-75 focus:bg-hover text-sm"
+                type="text"
+                placeholder="タイトル"
+                value={props.value}
+                onChange={props.onChange}
+            ></input>
+        </>
     )
 }

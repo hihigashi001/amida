@@ -1,4 +1,4 @@
-export const PriedFooder = (props) => {
+export const Pried = (props) => {
     const valueChange = (i) => {
         if (i == 0) {
             return props.pried1
@@ -46,34 +46,33 @@ export const PriedFooder = (props) => {
         }
     }
     return (
-        <table className="w-full table-fixed">
-            <tbody className="w-full">
+        <ul>
                 {
                     (() => {
                         const thTagCreate = [];
                         for (let i = 0; i < props.playerCount; i++) {
                             thTagCreate.push(
-                                <th key={i} className="px-2" colSpan="2">
+                                <div key={i} className="pt-4" colSpan="2">
+                                    <label>アイテム { i + 1 }</label>
                                     <input
                                         className="appearance-none w-full border border-primary hover:border-primary p-4 rounded placeholder-gray-400 text-gray-700 focus:outline-none focus:ring-2 focus:ring-secondary focus:ring-opacity-75 focus:bg-hover text-sm"
                                         name={"Player" + String(i + 1)}
                                         value={valueChange(i)}
                                         onChange={(event) => handleOnChange(event, i)}
                                     ></input>
-                                </th>)
+                                </div>)
                         }
                         return (
-                            <tr className="w-full">
+                            <li className="w-full">
                                 {
                                     thTagCreate.map((thTag) => {
                                         return thTag;
                                     })
                                 }
-                            </tr>
+                            </li>
                         )
                     })()
                 }
-            </tbody>
-        </table>
+        </ul>
     )
 }

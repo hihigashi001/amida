@@ -6,11 +6,7 @@ import { useRouter } from 'next/router'
 import { Button } from "src/components/shared/Button"
 
 // Componets
-import { PlayerHead } from "src/components/index/PlayerHead"
-import { PriedFooder } from "src/components/index/PriedFooder"
-import { BoderCount } from "src/components/index/BoderCount"
-import { HideModal } from "src/components/index/HideModal"
-import { HideModalSpace } from "src/components/index/HideModalSpace"
+import { Pried } from "src/components/index/Pried"
 import { amidaCreate } from "src/redux/amidaSlice"
 import { TitleInput } from "src/components/index/TitleInput"
 
@@ -22,7 +18,7 @@ import { UserLayout } from "src/layouts/UserLayout"
 
 const Home = () => {
   const router = useRouter()
-  const [title, setTitle] = useState("あみだ題名")
+  const [title, setTitle] = useState("あみだタイトル")
   const [count, setCount] = useState(5)
   const [pried1, setPried1] = useState("◎当たり")
   const [pried2, setPried2] = useState("✕")
@@ -74,66 +70,45 @@ const Home = () => {
   return (
     <UserLayout>
       <div>
-        <div>
+        <div className="my-4 flex justify-center">
+          <h1>タイトル・本数・アイテムを入力してください</h1>
+        </div>
+        <div className="mb-4">
           <TitleInput value={title} onChange={(e) => setTitle(e.target.value)} />
         </div>
-        <div>
-          <Button className="mx-2" onClick={onClickOneAdd}>+1</Button>
-          <p className="inline font-bold text-2xl mx-2 text-gray-700">{count} 本</p>
-          <Button className="mx-2" onClick={onClickOneSub}>-1</Button>
-          <Button className="mx-2" onClick={onClickCreate}>あみだくじを作成する</Button>
+        <label>あみだくじの本数</label>
+        <div className="flex justify-center">
+          <p className="font-bold text-2xl mx-2 text-gray-700">{count} 本</p>
         </div>
-        <div className="p-8">
-          <PlayerHead playerCount={count} />
-          <div className="relative">
-            <table className="w-full table-fixed my-4 absolute">
-              <tbody className="w-full">
-                <BoderCount playerCount={count} />
-                <BoderCount playerCount={count} />
-                <BoderCount playerCount={count} />
-                <BoderCount playerCount={count} />
-                <BoderCount playerCount={count} />
-                <BoderCount playerCount={count} />
-                <BoderCount playerCount={count} />
-                <BoderCount playerCount={count} />
-                <BoderCount playerCount={count} />
-                <BoderCount playerCount={count} />
-              </tbody>
-            </table>
-          </div>
-          <div className="relative">
-            <HideModalSpace playerCount={count} />
-            <HideModal playerCount={count} />
-            <HideModal playerCount={count} />
-            <HideModal playerCount={count} />
-            <HideModal playerCount={count} />
-            <HideModal playerCount={count} />
-            <HideModal playerCount={count} />
-            <HideModalSpace playerCount={count} />
-          </div>
-          <PriedFooder
-            playerCount={count}
-            pried1={pried1}
-            pried2={pried2}
-            pried3={pried3}
-            pried4={pried4}
-            pried5={pried5}
-            pried6={pried6}
-            pried7={pried7}
-            pried8={pried8}
-            pried9={pried9}
-            pried10={pried10}
-            setPried1={setPried1}
-            setPried2={setPried2}
-            setPried3={setPried3}
-            setPried4={setPried4}
-            setPried5={setPried5}
-            setPried6={setPried6}
-            setPried7={setPried7}
-            setPried8={setPried8}
-            setPried9={setPried9}
-            setPried10={setPried10}
-          />
+        <div className="flex justify-center">
+          <Button className="mt-4" onClick={onClickOneAdd}>アイテムを増やす</Button>
+          <Button className="mt-4 ml-4" onClick={onClickOneSub}>アイテムを減らす</Button>
+        </div>
+        <Pried
+          playerCount={count}
+          pried1={pried1}
+          pried2={pried2}
+          pried3={pried3}
+          pried4={pried4}
+          pried5={pried5}
+          pried6={pried6}
+          pried7={pried7}
+          pried8={pried8}
+          pried9={pried9}
+          pried10={pried10}
+          setPried1={setPried1}
+          setPried2={setPried2}
+          setPried3={setPried3}
+          setPried4={setPried4}
+          setPried5={setPried5}
+          setPried6={setPried6}
+          setPried7={setPried7}
+          setPried8={setPried8}
+          setPried9={setPried9}
+          setPried10={setPried10}
+        />
+        <div className="flex justify-center">
+          <Button className="my-8 w-96" onClick={onClickCreate}>あみだくじを作る</Button>
         </div>
       </div>
     </UserLayout>
