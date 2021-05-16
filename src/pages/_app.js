@@ -1,20 +1,24 @@
 import "src/styles/globals.css";
 import ReactModal from "react-modal"
 import { ModalProvider } from "react-modal-hook"
-
-ReactModal.setAppElement('#__next')
-
+import Head from "next/head";
 import store from '../redux/store'
 import { Provider } from 'react-redux'
 
-function MyApp({ Component, pageProps }) {
+ReactModal.setAppElement('#__next')
+
+
+const App = (props) => {
   return (
     <Provider store={store}>
+      <Head>
+        <title>あみだくじ</title>
+      </Head>
       <ModalProvider>
-        <Component {...pageProps} />
+        <props.Component {...props.pageProps} />
       </ModalProvider>
     </Provider>
   )
 }
 
-export default MyApp
+export default App
