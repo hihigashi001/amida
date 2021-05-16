@@ -10,6 +10,10 @@ import { PriedFooder } from "src/components/index/PriedFooder"
 import { BoderCount } from "src/components/index/BoderCount"
 import { HideModal } from "src/components/index/HideModal"
 import { HideModalSpace } from "src/components/index/HideModalSpace"
+import { amidaCreate } from "src/redux/amidaSlice"
+
+// function
+import { Random10, RandomURL } from "src/utility/function"
 
 const Home = () => {
   const [count, setCount] = useState(10)
@@ -23,6 +27,8 @@ const Home = () => {
   const [pried8, setPried8] = useState("✕")
   const [pried9, setPried9] = useState("✕")
   const [pried10, setPried10] = useState("✕")
+  const url = RandomURL()
+  const random = Random10()
 
   const onClickOneAdd = () => {
     if (count < 10) {
@@ -36,7 +42,22 @@ const Home = () => {
   }
 
   const onClickCreate = () => {
-    console.log(count)
+    const sendData = {
+      url: url, 
+      count: count, 
+      random: random, 
+      pried1: pried1, 
+      pried2: pried2, 
+      pried3: pried3, 
+      pried4: pried4, 
+      pried5: pried5, 
+      pried6: pried6, 
+      pried7: pried7, 
+      pried8: pried8, 
+      pried9: pried9, 
+      pried10: pried10 
+    } 
+    amidaCreate(sendData)  
   }
 
   return (

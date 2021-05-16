@@ -5,3 +5,14 @@ export const Random10 = () => {
     }
     return random10
 }
+
+export const RandomURL = () => {
+    var l = 16;
+    var c = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+    var cl = c.length;
+    var randomURL = "";
+    for (var i = 0; i < l; i++) {
+        randomURL += c[Math.floor(Math.random() * cl)];
+    }
+    return randomURL
+}

@@ -1,5 +1,5 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
-import { db } from "src/utility/firebase";
+import { db, dataNow } from "src/utility/firebase";
 
 const init = {
     amidakuji: {
@@ -176,7 +176,27 @@ export const putPlayer10 = async (props) => {
 };
 
 // あみだ新規作成
-
+export const amidaCreate = async (props) => {
+    const { url, count, random, pried1, pried2, pried3, pried4, pried5, pried6, pried7, pried8, pried9, pried10 } = props;
+    const player1 = ""
+    const player2 = ""
+    const player3 = ""
+    const player4 = ""
+    const player5 = ""
+    const player6 = ""
+    const player7 = ""
+    const player8 = ""
+    const player9 = ""
+    const player10 = ""
+    const createAt = dataNow()
+    try {
+        await db
+            .collection('amidakuji')
+            .add({ url, count, random, pried1, pried2, pried3, pried4, pried5, pried6, pried7, pried8, pried9, pried10, player1, player2, player3, player4, player5, player6, player7, player8, player9, player10, createAt });
+    } catch (err) {
+        console.log('Error add document:', err);
+    }
+};
 
 const amidaSlice = createSlice({
     name: "amida",
