@@ -31,9 +31,9 @@ export const PriedFooder = (props) => {
                         const thTagCreate = [];
                         for (let i = 0; i < props.playerCount; i++) {
                             thTagCreate.push(
-                                <th key={i} className="px-2" colSpan="2">
+                                <th key={i} className="align-top" colSpan="2">
                                     <p
-                                        className="text-gray-700 text-lg"
+                                        className="writing-mode-vertical text-gray-700 mx-auto"
                                         name={"Player" + String(i + 1)}
                                     >{valueChange(i)}</p>
                                 </th>)

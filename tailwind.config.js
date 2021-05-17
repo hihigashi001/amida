@@ -28,7 +28,8 @@ module.exports = {
         'tertiary': '#EDF4F0',
         'hover': '#FCFADE',
         'hoverCommit': '#faf6be',
-      }
+      },
+
     },
   },
   variants: {
@@ -37,7 +38,11 @@ module.exports = {
       borderCollapse: ['hover', 'focus'],
     }
   },
-  plugins: [],
+  plugins: [
+    require('tailwindcss-writing-mode')({
+      variants: ['responsive', 'hover']
+    })
+  ],
   experimental: {
     optimizeFonts: true,
   },

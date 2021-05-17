@@ -1,6 +1,7 @@
 const webpack = require('webpack');
 require('dotenv').config();
 
+
 module.exports = {
     webpack: config => {
         const env = Object.keys(process.env).reduce((acc, curr) => {

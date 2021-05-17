@@ -18,7 +18,7 @@ import { UserLayout } from "src/layouts/UserLayout"
 
 const Home = () => {
   const router = useRouter()
-  const [title, setTitle] = useState("あみだタイトル")
+  const [title, setTitle] = useState("")
   const [count, setCount] = useState(5)
   const [pried1, setPried1] = useState("◎当たり")
   const [pried2, setPried2] = useState("✕")

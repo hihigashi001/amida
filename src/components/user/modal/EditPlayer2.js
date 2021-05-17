@@ -46,5 +46,5 @@ export const EditPlayer2 = () => {
         </>
     ))
 
-    return <Button className="p-2" onClick={showModal}>選択する</Button>
+    return <p className="bg-primary text-white cursor-pointer writing-mode-vertical mx-auto py-2" onClick={showModal}>選択する</p>
 }
