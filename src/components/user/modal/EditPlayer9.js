@@ -1,13 +1,19 @@
+import { useState } from "react"
 import ReactModal from "react-modal"
 import { useModal } from "react-modal-hook"
-import { Button } from "src/components/shared/Button"
 import { customStyles } from "./customStyles"
-import { useForm } from "react-hook-form";
 import cc from "classcat";
 import { selectAmidakuji, putPlayer9 } from "src/redux/amidaSlice";
 import { useSelector } from "react-redux";
 
 export const EditPlayer9 = () => {
+    document.onkeypress = enter;
+    function enter() {
+        if (window.event.keyCode == 13) {
+            return false;
+        }
+    }
+    const [value, setValue] = useState("")
     const InputClassName = cc([
         "shadow-lg mt-2 block appearance-none w-full border border-grey-light hover:border-primary px-2 py-2 rounded placeholder-gray-400 text-gray-700 focus:outline-none focus:ring-2 focus:ring-secondary focus:ring-opacity-75 focus:bg-hover text-sm",
     ]);
@@ -17,10 +23,9 @@ export const EditPlayer9 = () => {
     const PrimaryClassName = cc([
         "shadow-lg bg-primary hover:bg-secondary text-white font-bold text-sm focus:outline-none rounded-3xl p-4 m-2",
     ]);
-    const { register, handleSubmit } = useForm();
     const Admidakuji = useSelector(selectAmidakuji)
-    const onSubmit = (data) => {
-        const sendData = { ...Admidakuji, player9: data.playerName }
+    const onSubmit = () => {
+        const sendData = { ...Admidakuji, player9: value }
         putPlayer9(sendData)
         hideModal();
     }
@@ -33,17 +38,18 @@ export const EditPlayer9 = () => {
                 shouldCloseOnOverlayClick={true}
                 onRequestClose={hideModal}
             >
-                <form className="px-12 pt-12" onSubmit={handleSubmit(onSubmit)}>
-                    <label htmlFor="playerName">お名前</label>
-                    <input type="text" className={InputClassName} autoFocus {...register("playerName", { required: true, maxLength: 20 })} />
-                    <div className="flex flex-row justify-end w-full mt-12">
+                <form className="px-12 pt-12" onSubmit={onSubmit} autoComplete="off" >
+                    <label htmlFor="playerName text-gray-700">お名前</label>
+                    <input name="player9" className={InputClassName} autoFocus value={value} onChange={(e) => setValue(e.target.value)} required maxLength="12" />
+                    <div className="mt-2 text-xs text-gray-700">※ 12文字以内でお願いします！</div>
+                    <div className="flex flex-row justify-end w-full mt-8">
                         <button className={SecondaryClassName} onClick={hideModal}>キャンセル</button>
                         <button className={PrimaryClassName} type="submit">送信する</button>
                     </div>
                 </form>
             </ReactModal>
         </>
-    ))
+    ), [value])
 
-    return <p className="bg-primary text-white cursor-pointer writing-mode-vertical mx-auto py-2" onClick={showModal}>選択する</p>
+    return <p className="bg-primary text-white cursor-pointer writing-mode-vertical mx-auto py-6 px-1 border border-gray-200" onClick={showModal}>選択する</p>
 }
