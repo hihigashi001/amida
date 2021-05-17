@@ -207,6 +207,9 @@ const amidaSlice = createSlice({
     extraReducers: (builder) => {
         builder.addCase(fetchAmidaUrl.fulfilled, (state, action) => {
             state.amidakuji = action.payload;
+        }),
+        builder.addCase(fetchAmidaUrl.rejected, (state, action) => {
+            console.log("データ取得に失敗しました。")
         })
     }
 });
