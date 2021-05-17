@@ -33,7 +33,7 @@ export const PriedFooder = (props) => {
                             thTagCreate.push(
                                 <th key={i} className="align-top" colSpan="2">
                                     <p
-                                        className="writing-mode-vertical text-gray-700 mx-auto"
+                                        className="writing-mode-vertical text-gray-700 mx-auto leading-none　m-0 whitespace-nowrap"
                                         name={"Player" + String(i + 1)}
                                     >{valueChange(i)}</p>
                                 </th>)
