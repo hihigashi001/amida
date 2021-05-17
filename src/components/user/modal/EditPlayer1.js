@@ -45,5 +45,5 @@ export const EditPlayer1 = () => {
         </>
     ))
 
-    return <Button onClick={showModal}>選択する</Button>
+    return <Button className="p-2" onClick={showModal}>選択する</Button>
 }

@@ -7,7 +7,6 @@ import { Provider } from 'react-redux'
 
 ReactModal.setAppElement('#__next')
 
-
 const App = (props) => {
   return (
     <Provider store={store}>

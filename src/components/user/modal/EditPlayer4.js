@@ -5,7 +5,7 @@ import { customStyles } from "./customStyles"
 import { useForm } from "react-hook-form";
 import cc from "classcat";
 import { selectAmidakuji, putPlayer4 } from "src/redux/amidaSlice";
-import { useSelector, useDispatch } from "react-redux";
+import { useSelector } from "react-redux";
 
 export const EditPlayer4 = () => {
     const InputClassName = cc([
@@ -18,7 +18,6 @@ export const EditPlayer4 = () => {
         "shadow-lg bg-primary hover:bg-secondary text-white font-bold text-sm focus:outline-none rounded-3xl p-4 m-2",
     ]);
     const { register, handleSubmit } = useForm();
-    const dispatch = useDispatch();
     const Admidakuji = useSelector(selectAmidakuji)
     const onSubmit = ( data ) => {
         const sendData = { ...Admidakuji, player4: data.playerName}
@@ -46,5 +45,5 @@ export const EditPlayer4 = () => {
         </>
     ))
 
-    return <Button onClick={showModal}>選択する</Button>
+    return <Button className="p-2" onClick={showModal}>選択する</Button>
 }

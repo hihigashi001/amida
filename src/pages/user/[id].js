@@ -1,6 +1,7 @@
 // liblary
 import { useState, useEffect } from "react"
-import { useSelector } from "react-redux";
+import { useSelector } from "react-redux"
+import { useRouter } from "next/router"
 
 // Componets
 import { PlayerHead } from "src/components/user/PlayerHead"
@@ -29,7 +30,7 @@ import { db } from "src/utility/firebase"
 import { UserLayout } from "src/layouts/UserLayout"
 
 
-export const user = ({ query }) => {
+export const user = () => {
     const amidaData = useSelector(selectAmidakuji);
     const dispatch = useDispatch();
     const [opacity, setOpacity] = useState(false)
@@ -70,25 +71,30 @@ export const user = ({ query }) => {
         if (count == 10 && player1 !== "" && player2 !== "" && player3 !== "" && player4 !== "" && player5 !== "" && player6 !== "" && player7 !== "" && player8 !== "" && player9 !== "" && player10 !== "") setOpacity(true)
     }
 
-    useEffect(() => {
-        opacityChange()
-    }, [player1, player2, player3, player4, player5, player6, player7, player8, player9, player10])
+    const router = useRouter();
+    const pageId = router.query.id;
 
     useEffect(() => {
         const getData = () => {
-            dispatch(fetchAmidaUrl(query.page));
+            dispatch(fetchAmidaUrl(pageId));
         };
-        getData();
-    }, [])
+       if (router.asPath !== router.route) {
+           getData();
+        }
+    }, [router])
 
     useEffect(() => {
-        if (id !== "") {
+        if (id) {
             db.collection("amidakuji").doc(id).onSnapshot(() => {
-                dispatch(fetchAmidaUrl(query.page))
+                dispatch(fetchAmidaUrl(pageId))
             }
             )
         };
     }, [id]);
+
+    useEffect(() => {
+        opacityChange()
+    }, [player1, player2, player3, player4, player5, player6, player7, player8, player9, player10])
 
     return (
         <UserLayout>
@@ -155,10 +161,5 @@ export const user = ({ query }) => {
         </UserLayout>
     )
 }
-
-user.getInitialProps = ({ query }) => {
-    return { query }
-}
-
 
 export default user;

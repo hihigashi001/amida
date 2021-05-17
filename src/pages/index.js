@@ -61,7 +61,7 @@ const Home = () => {
       pried9: pried9,
       pried10: pried10
     }
-    const pushPage = '/user?page=' + url
+    const pushPage = '/user/' + url
     amidaCreate(sendData)
     router.push(pushPage)
 
@@ -81,8 +81,8 @@ const Home = () => {
           <p className="font-bold text-2xl mx-2 text-gray-700">{count} 本</p>
         </div>
         <div className="flex justify-center">
-          <Button className="mt-4" onClick={onClickOneAdd}>アイテムを増やす</Button>
-          <Button className="mt-4 ml-4" onClick={onClickOneSub}>アイテムを減らす</Button>
+          <Button className="p-4 mt-4" onClick={onClickOneAdd}>アイテムを増やす</Button>
+          <Button className="p-4 mt-4 ml-4" onClick={onClickOneSub}>アイテムを減らす</Button>
         </div>
         <Pried
           playerCount={count}
@@ -108,7 +108,7 @@ const Home = () => {
           setPried10={setPried10}
         />
         <div className="flex justify-center">
-          <Button className="my-8 w-96" onClick={onClickCreate}>あみだくじを作る</Button>
+          <Button className="p-4 my-8 w-96" onClick={onClickCreate}>あみだくじを作る</Button>
         </div>
       </div>
     </UserLayout>
