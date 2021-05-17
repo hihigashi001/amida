@@ -39,7 +39,7 @@ export const PriedFooder = (props) => {
                                 </th>)
                         }
                         return (
-                            <tr className="w-full h-64">
+                            <tr className="w-full">
                                 {
                                     thTagCreate.map((thTag) => {
                                         return thTag;
