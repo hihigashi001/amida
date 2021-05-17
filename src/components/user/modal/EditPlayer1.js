@@ -51,5 +51,5 @@ export const EditPlayer1 = () => {
         </>
     ), [value])
 
-    return <p className="bg-primary text-white cursor-pointer writing-mode-vertical mx-auto py-6 px-1 border border-gray-200　min-h-full" onClick={showModal}>選択する</p>
+    return <p className="bg-primary text-white cursor-pointer writing-mode-vertical mx-auto py-6 px-1 border border-gray-200" onClick={showModal}>選択する</p>
 }
