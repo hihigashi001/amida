@@ -2,13 +2,13 @@ import cc from "classcat";
 
 export const HideModal = (props) => {
     const className1 = cc([
-        "w-full table-fixed border-collapse border-spacing-0 bg-blue-900",
+        "w-full table-fixed border-collapse border-spacing-0 bg-secondary",
         {
             "opacity-0": props.opacity === true,
         },
     ]);
     const className2 = cc([
-        "bg-blue-900 p-4 text-xs",
+        "bg-secondary p-4 text-xs",
         {
             "opacity-0": props.opacity === true,
         },
