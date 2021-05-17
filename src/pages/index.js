@@ -71,12 +71,12 @@ const Home = () => {
     <UserLayout>
       <div>
         <div className="my-4 flex justify-center">
-          <h1>タイトル・本数・アイテムを入力してください</h1>
+          <h1 className="text-gray-700">タイトル・本数・アイテムを入力してください。</h1>
         </div>
         <div className="mb-4">
           <TitleInput value={title} onChange={(e) => setTitle(e.target.value)} />
         </div>
-        <label>あみだくじの本数</label>
+        <label className="text-gray-700">あみだくじの本数</label><label className="text-xs text-gray-700"> ※2~10本で選んで、アイテムを編集してください。</label>
         <div className="flex justify-center">
           <p className="font-bold text-2xl mx-2 text-gray-700">{count} 本</p>
         </div>

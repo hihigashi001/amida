@@ -53,7 +53,7 @@ export const Pried = (props) => {
                         for (let i = 0; i < props.playerCount; i++) {
                             thTagCreate.push(
                                 <div key={i} className="pt-4" colSpan="2">
-                                    <label>アイテム { i + 1 }</label>
+                                    <label className="text-gray-700">アイテム { i + 1 }</label>
                                     <input
                                         className="appearance-none w-full border border-primary hover:border-primary p-4 rounded placeholder-gray-400 text-gray-700 focus:outline-none focus:ring-2 focus:ring-secondary focus:ring-opacity-75 focus:bg-hover text-sm"
                                         name={"Player" + String(i + 1)}

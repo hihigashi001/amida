@@ -107,7 +107,7 @@ export const user = () => {
                     <h1 className="text-xl text-gray-700">{title}</h1>
                 </div>
                 <div className="my-4 flex justify-center">
-                    <h1>{count} 名が選択したらアミダが見れるよ</h1>
+                    <h1 className="text-gray-700">{count} 名が選択したらアミダが見れるよ</h1>
                 </div>
                 <div className="p-2">
                     <PlayerHead
