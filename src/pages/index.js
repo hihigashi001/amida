@@ -107,7 +107,7 @@ const Home = () => {
           setPried9={setPried9}
           setPried10={setPried10}
         />
-        <div className="flex justify-center">
+        <div className="flex justify-center mb-16">
           <Button className="p-4 my-8 w-96" onClick={onClickCreate}>あみだくじを作る</Button>
         </div>
       </div>
