@@ -24,7 +24,7 @@ const Home = () => {
   const [pried2, setPried2] = useState("✕")
   const [pried3, setPried3] = useState("✕")
   const [pried4, setPried4] = useState("✕")
-  const [pried5, setPried5] = useState("◎当たり")
+  const [pried5, setPried5] = useState("✕")
   const [pried6, setPried6] = useState("✕")
   const [pried7, setPried7] = useState("✕")
   const [pried8, setPried8] = useState("✕")
