@@ -76,7 +76,7 @@ const Home = () => {
         <div className="mb-4">
           <TitleInput value={title} onChange={(e) => setTitle(e.target.value)} />
         </div>
-        <label className="text-gray-700">あみだくじの本数</label><label className="text-xs text-gray-700"> ※2~10本で選んで、アイテムを編集してください。</label>
+        <label className="text-gray-700">あみだくじの本数</label><p className="text-xs text-gray-700"> ※2~10本で選んで、アイテムを編集してください。</p>
         <div className="flex justify-center">
           <p className="font-bold text-2xl mx-2 text-gray-700">{count} 本</p>
         </div>

@@ -8,7 +8,6 @@ const Footer = () => {
   const router = useRouter()
   const url = 'https://amida.vercel.app' + router.asPath
   const urlChack = router.asPath == "/"
-  console.log(urlChack)
   return (
     <footer className="fixed bottom-0 w-full text-right text-gray-700 text-sm bg-gray-200 h-12">
       <div>
