@@ -170,7 +170,7 @@ export const user = () => {
     return (
         <UserLayout>
             {
-                (id) ? <Component /> : <div>データ取得に失敗しました。リロードしてください。</div>
+                (id) ? <Component /> : <div>…</div>
             }
         </UserLayout>
     )
