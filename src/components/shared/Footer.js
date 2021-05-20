@@ -12,7 +12,7 @@ const Footer = () => {
     <footer className="fixed bottom-0 w-full text-right text-gray-700 text-sm bg-gray-200 h-12">
       <div>
         {
-          (!urlChack) ? <button className="bg-gray-700  hover:bg-gray-500 border-2 border-gray-200 text-white p-2 font-bold text-xs focus:outline-none w-1/2 h-12" onClick={() => router.push("/")}><Icon icon={faHome} /> あみだくじ作成ページに移動</button>
+          (!urlChack) ? <button className="bg-gray-700  hover:bg-gray-500 border-2 border-gray-200 text-white p-2 font-bold text-xs focus:outline-none w-1/2 h-12" onClick={() => router.push("/")}><Icon icon={faHome} /> あみだ作成ページに移動</button>
             : <button className="bg-gray-700  hover:bg-gray-500 border-2 border-gray-200 text-white p-2 font-bold text-xs focus:outline-none w-1/2 h-12" onClick={() => router.push("/")}><Icon icon={faHome} /> このサイトの説明</button>
         }
         <CopyToClipboard
