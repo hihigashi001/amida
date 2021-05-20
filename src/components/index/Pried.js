@@ -28,6 +28,7 @@ export const Pried = (props) => {
             const newValue = { value: inputValue.toLowerCase(), label: inputValue };
             setOptions([...options, newValue]);
             setValue1(newValue);
+            if (inputValue !== null) { props.setPried1(newValue.value) } else { props.setPried1("")}
         },
         [options]
     );
@@ -51,6 +52,7 @@ export const Pried = (props) => {
             const newValue = { value: inputValue.toLowerCase(), label: inputValue };
             setOptions([...options, newValue]);
             setValue2(newValue);
+            if (inputValue !== null) { props.setPried2(newValue.value) } else { props.setPried2("")}
         },
         [options]
     );
@@ -74,6 +76,7 @@ export const Pried = (props) => {
             const newValue = { value: inputValue.toLowerCase(), label: inputValue };
             setOptions([...options, newValue]);
             setValue3(newValue);
+            if (inputValue !== null) { props.setPried3(newValue.value) } else { props.setPried3("")}
         },
         [options]
     );
@@ -97,6 +100,7 @@ export const Pried = (props) => {
             const newValue = { value: inputValue.toLowerCase(), label: inputValue };
             setOptions([...options, newValue]);
             setValue4(newValue);
+            if (inputValue !== null) { props.setPried4(newValue.value) } else { props.setPried4("")}
         },
         [options]
     );
@@ -120,6 +124,7 @@ export const Pried = (props) => {
             const newValue = { value: inputValue.toLowerCase(), label: inputValue };
             setOptions([...options, newValue]);
             setValue5(newValue);
+            if (inputValue !== null) { props.setPried5(newValue.value) } else { props.setPried5("")}
         },
         [options]
     );
@@ -143,6 +148,7 @@ export const Pried = (props) => {
             const newValue = { value: inputValue.toLowerCase(), label: inputValue };
             setOptions([...options, newValue]);
             setValue6(newValue);
+            if (inputValue !== null) { props.setPried6(newValue.value) } else { props.setPried6("")}
         },
         [options]
     );
@@ -166,6 +172,7 @@ export const Pried = (props) => {
             const newValue = { value: inputValue.toLowerCase(), label: inputValue };
             setOptions([...options, newValue]);
             setValue7(newValue);
+            if (inputValue !== null) { props.setPried7(newValue.value) } else { props.setPried7("")}
         },
         [options]
     );
@@ -189,6 +196,7 @@ export const Pried = (props) => {
             const newValue = { value: inputValue.toLowerCase(), label: inputValue };
             setOptions([...options, newValue]);
             setValue8(newValue);
+            if (inputValue !== null) { props.setPried8(newValue.value) } else { props.setPried8("")}
         },
         [options]
     );
@@ -212,6 +220,7 @@ export const Pried = (props) => {
             const newValue = { value: inputValue.toLowerCase(), label: inputValue };
             setOptions([...options, newValue]);
             setValue9(newValue);
+            if (inputValue !== null) { props.setPried9(newValue.value) } else { props.setPried9("")}
         },
         [options]
     );
@@ -235,6 +244,7 @@ export const Pried = (props) => {
             const newValue = { value: inputValue.toLowerCase(), label: inputValue };
             setOptions([...options, newValue]);
             setValue10(newValue);
+            if (inputValue !== null) { props.setPried10(newValue.value) } else { props.setPried10("")}
         },
         [options]
     );
