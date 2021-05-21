@@ -1,3 +1,4 @@
+import Link from 'next/link'
 // layout
 import { UserLayout } from "src/layouts/UserLayout"
 
@@ -48,7 +49,7 @@ export const description = () => {
                     <h2 className="text-primary font-bold my-4">お問い合わせ</h2>
                     <div>
                         <p>運営者名　：hiro higashi</p>
-                        <p>お問合せ方法：「<a className="text-blue-700" href="https://policies.google.com/technologies/ads?gl=jp" target="_blank" rel="noopener noreferrer">こちらから</a>」</p>
+                        <p>お問合せ　：「<Link href="/contact"><a className="text-blue-700">こちらから</a></Link>」</p>
                     </div>
                 </div>
             </div>
