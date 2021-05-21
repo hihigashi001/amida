@@ -266,7 +266,7 @@ export const Pried = (props) => {
                     for (let i = 0; i < props.playerCount; i++) {
                         if (i == 0) {
                             thTagCreate.push(
-                                <div key={i} className="pt-4" colSpan="2">
+                                <div key={i} colSpan="2">
                                     <label className="text-gray-700">アイテム {i + 1}</label>
                                     <AsyncCreatableSelect
                                         id={"amida" + i}

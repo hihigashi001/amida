@@ -70,43 +70,46 @@ const Home = () => {
   return (
     <UserLayout>
       <div>
-        <div className="my-4 flex justify-center">
-          <h1 className="text-gray-700">タイトル・本数・アイテムを入力してください。</h1>
+        <div className="my-4 flex justify-center ">
+          <h1 className="text-gray-700">あみだくじ作成</h1>
         </div>
         <div className="mb-4">
           <TitleInput value={title} onChange={(e) => setTitle(e.target.value)} />
         </div>
-        <label className="text-gray-700">あみだくじの本数</label><p className="text-xs text-gray-700"> ※2~10本で選んで、アイテムを編集してください。</p>
+        <label className="text-primary font-bold">2. あみだくじの本数</label><p className="text-xs text-gray-700"> ※2~10本で選んで、アイテムを編集してください。</p>
         <div className="flex justify-center">
           <p className="font-bold text-2xl mx-2 text-gray-700">{count} 本</p>
         </div>
-        <div className="flex justify-center">
+        <div className="mb-4 flex justify-center">
           <Button className="p-4 mt-4" onClick={onClickOneAdd}>アイテムを増やす</Button>
           <Button className="p-4 mt-4 ml-4" onClick={onClickOneSub}>アイテムを減らす</Button>
         </div>
-        <Pried
-          playerCount={count}
-          pried1={pried1}
-          pried2={pried2}
-          pried3={pried3}
-          pried4={pried4}
-          pried5={pried5}
-          pried6={pried6}
-          pried7={pried7}
-          pried8={pried8}
-          pried9={pried9}
-          pried10={pried10}
-          setPried1={setPried1}
-          setPried2={setPried2}
-          setPried3={setPried3}
-          setPried4={setPried4}
-          setPried5={setPried5}
-          setPried6={setPried6}
-          setPried7={setPried7}
-          setPried8={setPried8}
-          setPried9={setPried9}
-          setPried10={setPried10}
-        />
+        <label className=" text-primary font-bold">3. アイテムの編集</label>
+        <div className="p-4 bg-white shadow-xl rounded-md border border-secondary">
+          <Pried
+            playerCount={count}
+            pried1={pried1}
+            pried2={pried2}
+            pried3={pried3}
+            pried4={pried4}
+            pried5={pried5}
+            pried6={pried6}
+            pried7={pried7}
+            pried8={pried8}
+            pried9={pried9}
+            pried10={pried10}
+            setPried1={setPried1}
+            setPried2={setPried2}
+            setPried3={setPried3}
+            setPried4={setPried4}
+            setPried5={setPried5}
+            setPried6={setPried6}
+            setPried7={setPried7}
+            setPried8={setPried8}
+            setPried9={setPried9}
+            setPried10={setPried10}
+          />
+        </div>
         <div className="flex justify-center mb-16">
           <Button className="p-4 my-8 w-96" onClick={onClickCreate}>あみだくじを作る</Button>
         </div>
