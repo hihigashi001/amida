@@ -1,12 +1,10 @@
 import { useCallback } from "react"
 import { useRouter } from 'next/router'
-//componets
-import { Button } from "src/components/shared/Button"
 // layout
 import { UserLayout } from "src/layouts/UserLayout"
 // redux
 import { useDispatch, useSelector } from "react-redux"
-import { setDatas, selectFormData } from "src/redux/contactSlice"
+import { setDatas, selectFormData, putGoogleForm } from "src/redux/contactSlice"
 import { useForm } from "react-hook-form"
 
 export const contactConfirm = () => {
@@ -29,6 +27,7 @@ export const contactConfirm = () => {
 
     const onSubmit = (e) => {
         e.preventDefault();
+        putGoogleForm(FormData)
         dispatch(setDatas(initData));
         router.push("/description")
     }

@@ -1,7 +1,5 @@
 import { useCallback } from "react"
 import { useRouter } from 'next/router'
-//componets
-import { Button } from "src/components/shared/Button"
 // layout
 import { UserLayout } from "src/layouts/UserLayout"
 // redux
