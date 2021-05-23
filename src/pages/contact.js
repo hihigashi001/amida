@@ -65,8 +65,8 @@ export const contact = () => {
                             {errors.contents && <span className="text-red-400 text-xs">※入力チェック</span>}
                         </div>
                         <div className="flex justify-end">
-                            <button className="bg-transparent hover:bg-primary text-primary font-semibold hover:text-white border border-primary hover:border-transparent text-sm focus:outline-none rounded-3xl p-4 m-2" onClick={hendleCancel}>前の画面に戻る</button>
-                            <button className="bg-primary hover:bg-secondary text-white font-bold text-sm focus:outline-none rounded-3xl p-4 m-2" onClick={handleSubmit(onSubmit)}>入力確認画面へ</button>
+                            <button className="bg-transparent hover:bg-primary text-primary font-semibold hover:text-white border border-primary hover:border-transparent text-sm focus:outline-none rounded-3xl p-4 m-2" onClick={hendleCancel}>前に戻る</button>
+                            <button className="bg-primary hover:bg-secondary text-white font-bold text-sm focus:outline-none rounded-3xl p-4 m-2" onClick={handleSubmit(onSubmit)}>入力確認へ</button>
                         </div>
                     </form>
                 </div>
