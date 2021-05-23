@@ -18,15 +18,27 @@ import { BoderCount7 } from "src/components/user/BoderCount/BoderCount7"
 import { BoderCount8 } from "src/components/user/BoderCount/BoderCount8"
 import { BoderCount9 } from "src/components/user/BoderCount/BoderCount9"
 import { BoderCount10 } from "src/components/user/BoderCount/BoderCount10"
+import { Button } from "src/components/shared/Button"
 // redux
 import {
     fetchAmidaUrl,
     fetchAmidaUrl2,
     selectAmidakuji,
     getAllPostIds,
+    putPlayer1,
+    putPlayer2,
+    putPlayer3,
+    putPlayer4,
+    putPlayer5,
+    putPlayer6,
+    putPlayer7,
+    putPlayer8,
+    putPlayer9,
+    putPlayer10,
 } from "src/redux/amidaSlice"
 import { useDispatch } from 'react-redux'
 import { db } from "src/utility/firebase"
+
 
 // layout
 import { UserLayout } from "src/layouts/UserLayout"
@@ -102,6 +114,29 @@ export const user = ({ params }) => {
         };
     }, [router, id, player1, player2, player3, player4, player5, player6, player7, player8, player9, player10])
 
+    const handleOnClick = () => {
+        const sendData1 = { ...amidaData, player1: "-" }
+        const sendData2 = { ...amidaData, player2: "-" }
+        const sendData3 = { ...amidaData, player3: "-" }
+        const sendData4 = { ...amidaData, player4: "-" }
+        const sendData5 = { ...amidaData, player5: "-" }
+        const sendData6 = { ...amidaData, player6: "-" }
+        const sendData7 = { ...amidaData, player7: "-" }
+        const sendData8 = { ...amidaData, player8: "-" }
+        const sendData9 = { ...amidaData, player9: "-" }
+        const sendData10 = { ...amidaData, player10: "-" }
+        if (player1 === "") { putPlayer1(sendData1) }
+        if (player2 === "") { putPlayer2(sendData2) }
+        if (player3 === "") { putPlayer3(sendData3) }
+        if (player4 === "") { putPlayer4(sendData4) }
+        if (player5 === "") { putPlayer5(sendData5) }
+        if (player6 === "") { putPlayer6(sendData6) }
+        if (player7 === "") { putPlayer7(sendData7) }
+        if (player8 === "") { putPlayer8(sendData8) }
+        if (player9 === "") { putPlayer9(sendData9) }
+        if (player10 === "") { putPlayer10(sendData10) }
+    }
+
     const Component = () => {
         return (
             <div className="mb-16">
@@ -164,6 +199,12 @@ export const user = ({ params }) => {
                         pried9={pried9}
                         pried10={pried10}
                     />
+                    <div className="my-4 flex justify-center">
+                        <h1 className="text-gray-700 block ">残りの選択ボタンをすべて自動入力</h1>
+                    </div>
+                    <div className="my-4 flex justify-center">
+                        <Button className="p-4" onClick={handleOnClick}>残りを全て選択する</Button>
+                    </div>
                 </div>
             </div>
         )
@@ -189,7 +230,7 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }) {
-    const postData  = await fetchAmidaUrl2(params.id)
+    const postData = await fetchAmidaUrl2(params.id)
     return {
         props: {
             postData: await postData
