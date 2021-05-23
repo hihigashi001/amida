@@ -33,9 +33,44 @@ const init = {
 // url一覧取得
 export const getAllPostIds = async () => {
     const res = await db.collection('amidakuji').get()
+
     return res.docs.map((doc) => {
-        return { params: { id: doc.data().url } }
+        return { params: { id: doc.data().url }, }
     })
+}
+
+// あみだページ情報の取得(URLから)
+export const fetchAmidaUrl2 = async (getURL) => {
+    const res = await db.collection('amidakuji').where("url", "==", getURL).get()
+    const amida = res.docs.map((doc) => ({
+        id: doc.id,
+        title: doc.data().title,
+        url: doc.data().url,
+        count: Number(doc.data().count),
+        random: doc.data().random,
+        player1: doc.data().player1,
+        player2: doc.data().player2,
+        player3: doc.data().player3,
+        player4: doc.data().player4,
+        player5: doc.data().player5,
+        player6: doc.data().player6,
+        player7: doc.data().player7,
+        player8: doc.data().player8,
+        player9: doc.data().player9,
+        player10: doc.data().player10,
+        pried1: doc.data().pried1,
+        pried2: doc.data().pried2,
+        pried3: doc.data().pried3,
+        pried4: doc.data().pried4,
+        pried5: doc.data().pried5,
+        pried6: doc.data().pried6,
+        pried7: doc.data().pried7,
+        pried8: doc.data().pried8,
+        pried9: doc.data().pried9,
+        pried10: doc.data().pried10,
+    })
+    )
+    return amida[0]
 }
 
 // あみだページ情報の取得(URLから)

@@ -21,6 +21,7 @@ import { BoderCount10 } from "src/components/user/BoderCount/BoderCount10"
 // redux
 import {
     fetchAmidaUrl,
+    fetchAmidaUrl2,
     selectAmidakuji,
     getAllPostIds,
 } from "src/redux/amidaSlice"
@@ -31,7 +32,7 @@ import { db } from "src/utility/firebase"
 import { UserLayout } from "src/layouts/UserLayout"
 
 
-export const user = () => {
+export const user = ({ params }) => {
     const amidaData = useSelector(selectAmidakuji);
     const dispatch = useDispatch();
     const [opacity, setOpacity] = useState(false)
@@ -179,20 +180,19 @@ export const user = () => {
 
 export default user;
 
-// export async function getStaticPaths() {
-//     const paths = await getAllPostIds()
-//     return {
-//         paths,
-//         fallback: true
-//     }
-// }
+export async function getStaticPaths() {
+    const paths = await getAllPostIds()
+    return {
+        paths,
+        fallback: true
+    }
+}
 
-// export async function getStaticProps({ params }) {
-//     const dispatch = useDispatch();
-//     const postData = dispatch(fetchAmidaUrl(params.id))
-//     return {
-//         props: {
-//             postData
-//         }
-//     }
-// }
+export async function getStaticProps({ params }) {
+    const postData  = await fetchAmidaUrl2(params.id)
+    return {
+        props: {
+            postData: await postData
+        }
+    }
+}
