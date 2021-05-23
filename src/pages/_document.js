@@ -24,6 +24,7 @@ class MyDocument extends Document {
           <meta property="og:url" content="https://amidakuji.net/" />
           <meta property="og:locale" content="ja_JP" />
           <meta property="og:site_name" content="完全無料シンプルあみだくじオンラインサイト" />
+          <script data-ad-client="ca-pub-9679478765506731" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
         </Head>
         <body>
           <Main />
