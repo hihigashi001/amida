@@ -22,6 +22,7 @@ import { BoderCount10 } from "src/components/user/BoderCount/BoderCount10"
 import {
     fetchAmidaUrl,
     selectAmidakuji,
+    getAllPostIds,
 } from "src/redux/amidaSlice"
 import { useDispatch } from 'react-redux'
 import { db } from "src/utility/firebase"
@@ -177,3 +178,21 @@ export const user = () => {
 }
 
 export default user;
+
+// export async function getStaticPaths() {
+//     const paths = await getAllPostIds()
+//     return {
+//         paths,
+//         fallback: true
+//     }
+// }
+
+// export async function getStaticProps({ params }) {
+//     const dispatch = useDispatch();
+//     const postData = dispatch(fetchAmidaUrl(params.id))
+//     return {
+//         props: {
+//             postData
+//         }
+//     }
+// }

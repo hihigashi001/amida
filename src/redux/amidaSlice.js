@@ -30,6 +30,13 @@ const init = {
         pried10: "",
     }
 }
+// url一覧取得
+export const getAllPostIds = async () => {
+    const res = await db.collection('amidakuji').get()
+    return res.docs.map((doc) => {
+        return { params: { id: doc.data().url } }
+    })
+}
 
 // あみだページ情報の取得(URLから)
 export const fetchAmidaUrl = createAsyncThunk('amida/getAmida', async (getURL) => {
@@ -208,9 +215,9 @@ const amidaSlice = createSlice({
         builder.addCase(fetchAmidaUrl.fulfilled, (state, action) => {
             state.amidakuji = action.payload;
         }),
-        builder.addCase(fetchAmidaUrl.rejected, (state, action) => {
-            console.log("データ取得に失敗しました。")
-        })
+            builder.addCase(fetchAmidaUrl.rejected, (state, action) => {
+                console.log("データ取得に失敗しました。")
+            })
     }
 });
 
