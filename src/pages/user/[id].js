@@ -210,6 +210,14 @@ export const user = ({ params }) => {
         )
     }
 
+    if (router.isFallback) {
+        return (
+            <UserLayout>
+                <div>Loading...</div>
+            </UserLayout>
+        )
+    }
+
     return (
         <UserLayout>
             {
@@ -218,8 +226,6 @@ export const user = ({ params }) => {
         </UserLayout>
     )
 }
-
-export default user;
 
 export async function getStaticPaths() {
     const paths = await getAllPostIds()
@@ -237,3 +243,5 @@ export async function getStaticProps({ params }) {
         }
     }
 }
+
+export default user;
