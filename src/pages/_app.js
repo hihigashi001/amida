@@ -5,6 +5,8 @@ import { ModalProvider } from "react-modal-hook"
 import Head from "next/head";
 import store from '../redux/store'
 import { Provider } from 'react-redux'
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 import * as gtag from 'src/utility/gtag'
 import { useRouter } from 'next/router'
@@ -35,6 +37,7 @@ const App = (props) => {
           <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
         </Head>
         <props.Component {...props.pageProps} />
+        <ToastContainer />
       </ModalProvider>
     </Provider>
   )

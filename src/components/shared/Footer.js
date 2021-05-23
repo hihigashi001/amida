@@ -4,6 +4,8 @@ import { Icon } from "src/components/shared/Icon"
 import { faCopy } from "@fortawesome/free-solid-svg-icons";
 import { faHome } from "@fortawesome/free-solid-svg-icons";
 
+import { info } from "src/components/shared/Toast"
+
 const Footer = () => {
   const router = useRouter()
   const url = 'https://amidakuji.net' + router.asPath
@@ -17,7 +19,7 @@ const Footer = () => {
         }
         <CopyToClipboard
           text={url}
-          onCopy={() => alert(`クリップボードにコピーしました！`)}
+          onCopy={() => info(`クリップボードにコピーしました！`)}
         >
           <button className="bg-blue-500  hover:bg-blue-300 border-2 border-gray-200 text-white p-2 font-bold text-xs focus:outline-none w-1/2 h-12"><Icon icon={faCopy} /> このページのURLをコピー</button>
         </CopyToClipboard>

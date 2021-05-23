@@ -1,4 +1,5 @@
 import Link from 'next/link'
+// import AdSense from 'react-adsense';
 // layout
 import { UserLayout } from "src/layouts/UserLayout"
 
@@ -25,6 +26,12 @@ export const description = () => {
                         スマホ、PCなどに対応していて、完全無料で会員登録も必要ありません。あみだくじアプリのようなインストール作業も不要です。また、広告はこのページだけです。
                     </div>
                 </div>
+                {/* <div className="mt-2 p-2">
+                    <AdSense.Google
+                        client='ca-pub-9679478765506731'
+                        // slot='7806394673'
+                    />
+                </div> */}
                 <div className="bg-white mt-8 p-8">
                     <h1 className="text-primary font-bold flex justify-center mb-8">プライバシーポリシー・免責事項</h1>
                     <h2 className="text-primary font-bold my-4">広告について</h2>
