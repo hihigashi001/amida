@@ -1,2 +1,5 @@
 User-Agent:*
 Disallow:/user/
+
+
+Sitemap:https://amidakuji.net/sitemap.xml
