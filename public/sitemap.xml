@@ -17,9 +17,5 @@
   <loc>https://amidakuji.net/contactConfirm</loc>
   <priority>1.0</priority>
 </url>
-<url>
-  <loc>https://amidakuji.net/user</loc>
-  <priority>1.0</priority>
-</url>
 
 </urlset>
