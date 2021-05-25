@@ -20,7 +20,7 @@ export const Pried = (props) => {
 
     const handleChange1 = useCallback((inputValue) => {
         setValue1(inputValue)
-        if (inputValue !== null) { props.setPried1(inputValue.value) } else { props.setPried1("")}
+        if (inputValue !== null) { props.setPried1(inputValue.value) } else { props.setPried1("") }
     }, []);
 
     const handleCreate1 = useCallback(
@@ -28,7 +28,7 @@ export const Pried = (props) => {
             const newValue = { value: inputValue.toLowerCase(), label: inputValue };
             setOptions([...options, newValue]);
             setValue1(newValue);
-            if (inputValue !== null) { props.setPried1(newValue.value) } else { props.setPried1("")}
+            if (inputValue !== null) { props.setPried1(newValue.value) } else { props.setPried1("") }
         },
         [options]
     );
@@ -44,7 +44,7 @@ export const Pried = (props) => {
 
     const handleChange2 = useCallback((inputValue) => {
         setValue2(inputValue)
-        if (inputValue !== null) { props.setPried2(inputValue.value) } else { props.setPried2("")}
+        if (inputValue !== null) { props.setPried2(inputValue.value) } else { props.setPried2("") }
     }, []);
 
     const handleCreate2 = useCallback(
@@ -52,7 +52,7 @@ export const Pried = (props) => {
             const newValue = { value: inputValue.toLowerCase(), label: inputValue };
             setOptions([...options, newValue]);
             setValue2(newValue);
-            if (inputValue !== null) { props.setPried2(newValue.value) } else { props.setPried2("")}
+            if (inputValue !== null) { props.setPried2(newValue.value) } else { props.setPried2("") }
         },
         [options]
     );
@@ -68,7 +68,7 @@ export const Pried = (props) => {
 
     const handleChange3 = useCallback((inputValue) => {
         setValue3(inputValue)
-        if (inputValue !== null) { props.setPried3(inputValue.value) } else { props.setPried3("")}
+        if (inputValue !== null) { props.setPried3(inputValue.value) } else { props.setPried3("") }
     }, []);
 
     const handleCreate3 = useCallback(
@@ -76,7 +76,7 @@ export const Pried = (props) => {
             const newValue = { value: inputValue.toLowerCase(), label: inputValue };
             setOptions([...options, newValue]);
             setValue3(newValue);
-            if (inputValue !== null) { props.setPried3(newValue.value) } else { props.setPried3("")}
+            if (inputValue !== null) { props.setPried3(newValue.value) } else { props.setPried3("") }
         },
         [options]
     );
@@ -92,7 +92,7 @@ export const Pried = (props) => {
 
     const handleChange4 = useCallback((inputValue) => {
         setValue4(inputValue)
-        if (inputValue !== null) { props.setPried4(inputValue.value) } else { props.setPried4("")}
+        if (inputValue !== null) { props.setPried4(inputValue.value) } else { props.setPried4("") }
     }, []);
 
     const handleCreate4 = useCallback(
@@ -100,7 +100,7 @@ export const Pried = (props) => {
             const newValue = { value: inputValue.toLowerCase(), label: inputValue };
             setOptions([...options, newValue]);
             setValue4(newValue);
-            if (inputValue !== null) { props.setPried4(newValue.value) } else { props.setPried4("")}
+            if (inputValue !== null) { props.setPried4(newValue.value) } else { props.setPried4("") }
         },
         [options]
     );
@@ -116,7 +116,7 @@ export const Pried = (props) => {
 
     const handleChange5 = useCallback((inputValue) => {
         setValue5(inputValue)
-        if (inputValue !== null) { props.setPried5(inputValue.value) } else { props.setPried5("")}
+        if (inputValue !== null) { props.setPried5(inputValue.value) } else { props.setPried5("") }
     }, []);
 
     const handleCreate5 = useCallback(
@@ -124,7 +124,7 @@ export const Pried = (props) => {
             const newValue = { value: inputValue.toLowerCase(), label: inputValue };
             setOptions([...options, newValue]);
             setValue5(newValue);
-            if (inputValue !== null) { props.setPried5(newValue.value) } else { props.setPried5("")}
+            if (inputValue !== null) { props.setPried5(newValue.value) } else { props.setPried5("") }
         },
         [options]
     );
@@ -140,7 +140,7 @@ export const Pried = (props) => {
 
     const handleChange6 = useCallback((inputValue) => {
         setValue6(inputValue)
-        if (inputValue !== null) { props.setPried6(inputValue.value) } else { props.setPried6("")}
+        if (inputValue !== null) { props.setPried6(inputValue.value) } else { props.setPried6("") }
     }, []);
 
     const handleCreate6 = useCallback(
@@ -148,7 +148,7 @@ export const Pried = (props) => {
             const newValue = { value: inputValue.toLowerCase(), label: inputValue };
             setOptions([...options, newValue]);
             setValue6(newValue);
-            if (inputValue !== null) { props.setPried6(newValue.value) } else { props.setPried6("")}
+            if (inputValue !== null) { props.setPried6(newValue.value) } else { props.setPried6("") }
         },
         [options]
     );
@@ -164,7 +164,7 @@ export const Pried = (props) => {
 
     const handleChange7 = useCallback((inputValue) => {
         setValue7(inputValue)
-        if (inputValue !== null) { props.setPried7(inputValue.value) } else { props.setPried7("")}
+        if (inputValue !== null) { props.setPried7(inputValue.value) } else { props.setPried7("") }
     }, []);
 
     const handleCreate7 = useCallback(
@@ -172,7 +172,7 @@ export const Pried = (props) => {
             const newValue = { value: inputValue.toLowerCase(), label: inputValue };
             setOptions([...options, newValue]);
             setValue7(newValue);
-            if (inputValue !== null) { props.setPried7(newValue.value) } else { props.setPried7("")}
+            if (inputValue !== null) { props.setPried7(newValue.value) } else { props.setPried7("") }
         },
         [options]
     );
@@ -188,7 +188,7 @@ export const Pried = (props) => {
 
     const handleChange8 = useCallback((inputValue) => {
         setValue8(inputValue)
-        if (inputValue !== null) { props.setPried8(inputValue.value) } else { props.setPried8("")}
+        if (inputValue !== null) { props.setPried8(inputValue.value) } else { props.setPried8("") }
     }, []);
 
     const handleCreate8 = useCallback(
@@ -196,7 +196,7 @@ export const Pried = (props) => {
             const newValue = { value: inputValue.toLowerCase(), label: inputValue };
             setOptions([...options, newValue]);
             setValue8(newValue);
-            if (inputValue !== null) { props.setPried8(newValue.value) } else { props.setPried8("")}
+            if (inputValue !== null) { props.setPried8(newValue.value) } else { props.setPried8("") }
         },
         [options]
     );
@@ -212,7 +212,7 @@ export const Pried = (props) => {
 
     const handleChange9 = useCallback((inputValue) => {
         setValue9(inputValue)
-        if (inputValue !== null) { props.setPried9(inputValue.value) } else { props.setPried9("")}
+        if (inputValue !== null) { props.setPried9(inputValue.value) } else { props.setPried9("") }
     }, []);
 
     const handleCreate9 = useCallback(
@@ -220,7 +220,7 @@ export const Pried = (props) => {
             const newValue = { value: inputValue.toLowerCase(), label: inputValue };
             setOptions([...options, newValue]);
             setValue9(newValue);
-            if (inputValue !== null) { props.setPried9(newValue.value) } else { props.setPried9("")}
+            if (inputValue !== null) { props.setPried9(newValue.value) } else { props.setPried9("") }
         },
         [options]
     );
@@ -236,7 +236,7 @@ export const Pried = (props) => {
 
     const handleChange10 = useCallback((inputValue) => {
         setValue10(inputValue)
-        if (inputValue !== null) { props.setPried10(inputValue.value) } else { props.setPried10("")}
+        if (inputValue !== null) { props.setPried10(inputValue.value) } else { props.setPried10("") }
     }, []);
 
     const handleCreate10 = useCallback(
@@ -244,7 +244,7 @@ export const Pried = (props) => {
             const newValue = { value: inputValue.toLowerCase(), label: inputValue };
             setOptions([...options, newValue]);
             setValue10(newValue);
-            if (inputValue !== null) { props.setPried10(newValue.value) } else { props.setPried10("")}
+            if (inputValue !== null) { props.setPried10(newValue.value) } else { props.setPried10("") }
         },
         [options]
     );
@@ -267,11 +267,11 @@ export const Pried = (props) => {
                         if (i == 0) {
                             thTagCreate.push(
                                 <div key={i} colSpan="2">
-                                    <label className="text-gray-700">アイテム {i + 1}</label>
+                                    <label htmlFor="amida0" className="text-gray-700">アイテム {i + 1}</label>
                                     <AsyncCreatableSelect
-                                        id={"amida" + i}
-                                        instanceId={"amida" + i}
-                                        inputId={"amida" + i}
+                                        id={"amida0"}
+                                        instanceId={"amida0"}
+                                        inputId={"amida0"}
                                         isClearable={true}
                                         value={value1}
                                         options={options}
@@ -285,11 +285,11 @@ export const Pried = (props) => {
                         } else if (i == 1) {
                             thTagCreate.push(
                                 <div key={i} className="pt-4" colSpan="2">
-                                    <label className="text-gray-700">アイテム {i + 1}</label>
+                                    <label htmlFor="amida1" className="text-gray-700">アイテム {i + 1}</label>
                                     <AsyncCreatableSelect
-                                        id={"amida" + i}
-                                        instanceId={"amida" + i}
-                                        inputId={"amida" + i}
+                                        id={"amida1"}
+                                        instanceId={"amida1"}
+                                        inputId={"amida1"}
                                         isClearable={true}
                                         value={value2}
                                         options={options}
@@ -303,11 +303,11 @@ export const Pried = (props) => {
                         } else if (i == 2) {
                             thTagCreate.push(
                                 <div key={i} className="pt-4" colSpan="2">
-                                    <label className="text-gray-700">アイテム {i + 1}</label>
+                                    <label htmlFor="amida2" className="text-gray-700">アイテム {i + 1}</label>
                                     <AsyncCreatableSelect
-                                        id={"amida" + i}
-                                        instanceId={"amida" + i}
-                                        inputId={"amida" + i}
+                                        id={"amida2"}
+                                        instanceId={"amida2"}
+                                        inputId={"amida2"}
                                         isClearable={true}
                                         value={value3}
                                         options={options}
@@ -321,11 +321,11 @@ export const Pried = (props) => {
                         } else if (i == 3) {
                             thTagCreate.push(
                                 <div key={i} className="pt-4" colSpan="2">
-                                    <label className="text-gray-700">アイテム {i + 1}</label>
+                                    <label htmlFor="amida3" className="text-gray-700">アイテム {i + 1}</label>
                                     <AsyncCreatableSelect
-                                        id={"amida" + i}
-                                        instanceId={"amida" + i}
-                                        inputId={"amida" + i}
+                                        id={"amida3"}
+                                        instanceId={"amida3"}
+                                        inputId={"amida3"}
                                         isClearable={true}
                                         value={value4}
                                         options={options}
@@ -339,11 +339,11 @@ export const Pried = (props) => {
                         } else if (i == 4) {
                             thTagCreate.push(
                                 <div key={i} className="pt-4" colSpan="2">
-                                    <label className="text-gray-700">アイテム {i + 1}</label>
+                                    <label htmlFor="amida4" className="text-gray-700">アイテム {i + 1}</label>
                                     <AsyncCreatableSelect
-                                        id={"amida" + i}
-                                        instanceId={"amida" + i}
-                                        inputId={"amida" + i}
+                                        id={"amida4"}
+                                        instanceId={"amida4"}
+                                        inputId={"amida4"}
                                         isClearable={true}
                                         value={value5}
                                         options={options}
@@ -357,11 +357,11 @@ export const Pried = (props) => {
                         } else if (i == 5) {
                             thTagCreate.push(
                                 <div key={i} className="pt-4" colSpan="2">
-                                    <label className="text-gray-700">アイテム {i + 1}</label>
+                                    <label htmlFor="amida5" className="text-gray-700">アイテム {i + 1}</label>
                                     <AsyncCreatableSelect
-                                        id={"amida" + i}
-                                        instanceId={"amida" + i}
-                                        inputId={"amida" + i}
+                                        id={"amida5"}
+                                        instanceId={"amida5"}
+                                        inputId={"amida5"}
                                         isClearable={true}
                                         value={value6}
                                         options={options}
@@ -375,11 +375,11 @@ export const Pried = (props) => {
                         } else if (i == 6) {
                             thTagCreate.push(
                                 <div key={i} className="pt-4" colSpan="2">
-                                    <label className="text-gray-700">アイテム {i + 1}</label>
+                                    <label htmlFor="amida6" className="text-gray-700">アイテム {i + 1}</label>
                                     <AsyncCreatableSelect
-                                        id={"amida" + i}
-                                        instanceId={"amida" + i}
-                                        inputId={"amida" + i}
+                                        id={"amida6"}
+                                        instanceId={"amida6"}
+                                        inputId={"amida6"}
                                         isClearable={true}
                                         value={value7}
                                         options={options}
@@ -393,11 +393,11 @@ export const Pried = (props) => {
                         } else if (i == 7) {
                             thTagCreate.push(
                                 <div key={i} className="pt-4" colSpan="2">
-                                    <label className="text-gray-700">アイテム {i + 1}</label>
+                                    <label htmlFor="amida7" className="text-gray-700">アイテム {i + 1}</label>
                                     <AsyncCreatableSelect
-                                        id={"amida" + i}
-                                        instanceId={"amida" + i}
-                                        inputId={"amida" + i}
+                                        id={"amida7"}
+                                        instanceId={"amida7"}
+                                        inputId={"amida7"}
                                         isClearable={true}
                                         value={value8}
                                         options={options}
@@ -411,11 +411,11 @@ export const Pried = (props) => {
                         } else if (i == 8) {
                             thTagCreate.push(
                                 <div key={i} className="pt-4" colSpan="2">
-                                    <label className="text-gray-700">アイテム {i + 1}</label>
+                                    <label htmlFor="amida8" className="text-gray-700">アイテム {i + 1}</label>
                                     <AsyncCreatableSelect
-                                        id={"amida" + i}
-                                        instanceId={"amida" + i}
-                                        inputId={"amida" + i}
+                                        id={"amida8"}
+                                        instanceId={"amida8"}
+                                        inputId={"amida8"}
                                         isClearable={true}
                                         value={value9}
                                         options={options}
@@ -429,11 +429,11 @@ export const Pried = (props) => {
                         } else if (i == 9) {
                             thTagCreate.push(
                                 <div key={i} className="pt-4" colSpan="2">
-                                    <label className="text-gray-700">アイテム {i + 1}</label>
+                                    <label htmlFor="amida9" className="text-gray-700">アイテム {i + 1}</label>
                                     <AsyncCreatableSelect
-                                        id={"amida" + i}
-                                        instanceId={"amida" + i}
-                                        inputId={"amida" + i}
+                                        id={"amida9"}
+                                        instanceId={"amida9"}
+                                        inputId={"amida9"}
                                         isClearable={true}
                                         value={value10}
                                         options={options}
