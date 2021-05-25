@@ -19,7 +19,7 @@ class MyDocument extends Document {
           <link rel="icon" href="favi62.png" sizes="62x62" type="image/png" />
           <link rel="apple-touch-icon-precomposed" href="favi150.png" />
           <link rel="canonical" href="https://amidakuji.net/" />
-          <meta property="og:title" content="あみだくじサイト" />
+          <meta property="og:title" content="あみだくじサイト | Amidakuji.net" />
           <meta property="og:type" content="website" />
           <meta property="og:description" content="オンラインあみだくじサイトです。完全無料で使えてシンプルかつ簡単にご利用いただけます。サイト上でアミダくじを瞬時に作成してURLを共有することで公平な抽選が可能です。順番決め、幹事決め、チーム分け、グループ分け、係や役割分担、景品の抽選など使い方は工夫次第です。離れた場所にいる場合で何かを決めるのにとても役に立つサイトです。あみだくじアプリのようなインストール作業も不要です。" />
           <meta property="og:url" content="https://amidakuji.net/" />
