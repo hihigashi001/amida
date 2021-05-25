@@ -1,5 +1,5 @@
 import "src/styles/globals.css";
-import { useEffect } from "react"
+// import { useEffect } from "react"
 import ReactModal from "react-modal"
 import { ModalProvider } from "react-modal-hook"
 import Head from "next/head";
