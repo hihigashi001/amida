@@ -30,7 +30,7 @@ export const contact = () => {
         <UserLayout>
             <div className="mb-16">
                 <div className="my-4 flex justify-center">
-                    <h1 className="text-gray-700">お問合わせ</h1>
+                    <h2 className="text-gray-700">お問合わせ</h2>
                 </div>
                 <div className="flex justify-center">
                     <form className="mt-4 p-4">

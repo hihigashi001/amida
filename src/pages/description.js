@@ -9,31 +9,27 @@ export const description = () => {
         <UserLayout>
             <div className="mb-16">
                 <div className="mt-2 p-2">
-                    <h1 className="text-primary font-bold my-4">このサイトの利用方法</h1>
+                    <h1>このサイトの説明になります。</h1>
+                    <h2 className="text-primary font-bold my-4">このサイトの利用方法</h2>
                     <ul className="list-decimal list-inside">
                         <li>あみだくじ作成ページで、あみだくじを作成します。</li>
                         <li>作成したあみだくじのURLをコピーして、メールやLineなどで共有してご活用下さい。</li>
                         <li>あみだくじは全員が選択すると、自動的に表示されます。</li>
                         <li>予期せぬエラーが発生した場合は、ページをリロードすることで解決することがあります。</li>
+                        <p>詳しい説明は　：「<Link href="/usage"><a className="text-blue-700">こちらから</a></Link>」</p>
                     </ul>
                 </div>
                 <div className="mt-2 p-2">
-                    <h1 className="text-primary font-bold my-4">このサイトについて</h1>
+                    <h2 className="text-primary font-bold my-4">このサイトについて</h2>
                     <div>
                         当サイトではあみだくじを自動的に作ることが出来ます。
                         もちろんあみだくじの結果はすべての選択肢が選択されるまで隠されているので公平なくじが出来ます。
                         オンラインなのでインターネット経由で引くことが出来ます。
-                        スマホ、PCなどに対応していて、完全無料で会員登録も必要ありません。あみだくじアプリのようなインストール作業も不要です。また、広告はこのページだけです。
+                        スマホ、PCなどに対応していて、完全無料で会員登録も必要ありません。あみだくじアプリのようなインストール作業も不要です。
                     </div>
                 </div>
-                {/* <div className="mt-2 p-2">
-                    <AdSense.Google
-                        client='ca-pub-9679478765506731'
-                        // slot='7806394673'
-                    />
-                </div> */}
                 <div className="bg-white mt-8 p-8">
-                    <h1 className="text-primary font-bold flex justify-center mb-8">プライバシーポリシー・免責事項</h1>
+                    <h2 className="text-primary font-bold flex justify-center mb-8">プライバシーポリシー・免責事項</h2>
                     <h2 className="text-primary font-bold my-4">広告について</h2>
                     <div>
                         当サイトでは、第三者配信の広告サービス（Googleアドセンス）を利用しており、ユーザーの興味に応じた商品やサービスの広告を表示するため、クッキー（Cookie）を使用しております。クッキーを使用することで当サイトはお客様のコンピュータを識別できるようになりますが、お客様個人を特定できるものではありません。Cookieを無効にする方法やGoogleアドセンスに関する詳細は

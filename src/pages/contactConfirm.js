@@ -46,7 +46,7 @@ export const contactConfirm = () => {
         <UserLayout>
             <div className="mb-16">
                 <div className="my-4 flex justify-center">
-                    <h1 className="text-primary font-bold">お問合わせ内容の確認</h1>
+                    <h2 className="text-primary font-bold">お問合わせ内容の確認</h2>
                 </div>
                 <div className="flex justify-center">
                     <form className="mt-4 p-4">

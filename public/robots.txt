@@ -1,5 +1,5 @@
 User-Agent:*
 Disallow:/user/
-
+Disallow: /contactConfirm/
 
 Sitemap:https://amidakuji.net/sitemap.xml
