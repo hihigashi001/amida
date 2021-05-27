@@ -1,15 +1,9 @@
-import { useRouter } from 'next/router'
 import Image from "next/image"
+import Link from "next/link"
 // layout
 import { UserLayout } from "src/layouts/UserLayout"
-//com
-import { Button } from "src/components/shared/Button"
 
 export const myself = () => {
-    const router = useRouter()
-    const handleOnClick = () => {
-        router.push("/")
-    }
     return (
         <UserLayout>
             <div className="mb-16">
@@ -89,7 +83,7 @@ export const myself = () => {
                     下のボタンからすごく簡単に作成できます！もちろん無料です。
                 </div>
                 <div className="my-4 flex justify-center">
-                    <Button className="p-4" onClick={handleOnClick}>あみだくじを作成する</Button>
+                    <Link href="/"><a className="p-4 bg-primary hover:bg-secondary text-white font-bold text-xs focus:outline-none">あみだくじを作成する</a></Link>
                 </div>
             </div>
         </UserLayout >
