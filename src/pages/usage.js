@@ -1,9 +1,14 @@
-import Link from 'next/link'
+import { useRouter } from 'next/router'
 // layout
 import { UserLayout } from "src/layouts/UserLayout"
+//com
+import { Button } from "src/components/shared/Button"
 
 export const usage = () => {
-
+    const router = useRouter()
+    const handleOnClick = () => {
+        router.push("/")
+    }
     return (
         <UserLayout>
             <div className="mb-16">
@@ -60,6 +65,9 @@ export const usage = () => {
                     <div className="mt-8 text-primary font-bold">
                         詳しく説明を記載しましたが、まずはやってみた方が理解できると思います。
                         あみだくじ作成ページに移動して、さっそくあみだくじを作ってみましょう。
+                    </div>
+                    <div className="my-4 flex justify-center">
+                        <Button className="p-4" onClick={handleOnClick}>あみだくじを作成する</Button>
                     </div>
                 </div>
             </div>

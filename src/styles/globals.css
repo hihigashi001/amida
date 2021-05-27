@@ -49,6 +49,11 @@
     border-style: solid;
     border-color: #5cd6b4 transparent transparent transparent;
   }
+  h4 {
+    padding: 1rem 2rem;
+    border-left: 5px solid #000;
+    background: #f4f4f4;
+  }
 }
 
 @layer utilities {

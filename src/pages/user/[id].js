@@ -141,10 +141,10 @@ export const user = ({ params }) => {
         return (
             <div className="mb-16">
                 <div>
-                    <h1 className="text-xl text-gray-700">{title}</h1>
+                    <h2 className="text-xl text-gray-700">{title}</h2>
                 </div>
                 <div className="my-4 flex justify-center">
-                    <h1 className="text-gray-700">{count} 名が選択したらアミダが見れるよ</h1>
+                    <h2 className="text-gray-700">{count} 名が選択したらアミダが見れるよ</h2>
                 </div>
                 <div className="p-2">
                     <PlayerHead
@@ -200,7 +200,7 @@ export const user = ({ params }) => {
                         pried10={pried10}
                     />
                     <div className="my-4 flex justify-center">
-                        <h1 className="text-gray-700 block ">残りの選択ボタンをすべて自動入力</h1>
+                        <h2 className="text-gray-700 block ">残りの選択ボタンをすべて自動入力</h2>
                     </div>
                     <div className="my-4 flex justify-center">
                         <Button className="p-4" onClick={handleOnClick}>残りを全て選択する</Button>

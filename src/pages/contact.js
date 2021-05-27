@@ -32,6 +32,15 @@ export const contact = () => {
                 <div className="my-4 flex justify-center">
                     <h2 className="text-gray-700">お問合わせ</h2>
                 </div>
+                <div className="my-4 flex justify-center">
+                    <h3 className="text-gray-700">あみだくじに関することなど、お気軽にお問い合わせください。</h3>
+                </div>
+                <div className="flex justify-center">
+                    <p>各項目ご入力いただき「入力確認へ」を押して進んでください。</p>
+                </div>
+                <div className="flex justify-center">
+                    <p>全て入力が終わりましたら「送信する」を押してください。</p>
+                </div>
                 <div className="flex justify-center">
                     <form className="mt-4 p-4">
                         <div className="text-gray-700 mb-4">
