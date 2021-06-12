@@ -4,7 +4,7 @@ import { useRouter } from 'next/router'
 import { UserLayout } from "src/layouts/UserLayout"
 // redux
 import { useDispatch, useSelector } from "react-redux"
-import { setDatas, selectFormData, putGoogleForm } from "src/redux/contactSlice"
+import { setDatas, selectFormData, createFirestore } from "src/redux/contactSlice"
 import { useForm } from "react-hook-form"
 import { error } from "src/components/shared/Toast"
 
@@ -30,7 +30,7 @@ export const contactConfirm = () => {
     const onSubmit = (e) => {
         e.preventDefault();
         if (checked) {
-            putGoogleForm(FormData)
+            createFirestore(FormData)
             dispatch(setDatas(initData));
             router.push("/description")
         } else {

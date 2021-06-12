@@ -1,5 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-import axios from "axios";
+import { db, dataNow } from "src/utility/firebase";
 
 const init = {
     formData: {
@@ -9,16 +9,19 @@ const init = {
     }
 }
 
-export const putGoogleForm = async (props) => {
-    const submitParams = new FormData()
-    submitParams.append("entry.2092238618", props.name);
-    submitParams.append("entry.1556369182", props.mail);
-    submitParams.append("entry.479301265", props.contents);
-    const CORS_PROXY = 'https://cors-anywhere.herokuapp.com/'
-    const GOOGLE_FORM_ACTION = 'https://docs.google.com/forms/u/0/d/e/1FAIpQLSdbqfraWV8FYeFzbVf59KJFxtuuo9CnuBUkULJWJQQK9smcfA/formResponse'
-    const res = await axios.post(CORS_PROXY + GOOGLE_FORM_ACTION, submitParams)
-    return res;
-}
+export const createFirestore = async (props) => {
+    const { name, mail, contents } = props;
+    const createAt = dataNow()
+    try {
+        await db
+            .collection('mail')
+            .add({ name: name, mail: mail, contents: contents, createAt: createAt });
+        location.reload();
+    } catch {
+        location.reload();
+    }
+};
+
 
 const contactSlice = createSlice({
     name: "contact",
