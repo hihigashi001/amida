@@ -16,7 +16,7 @@ const App = (props) => {
       <ModalProvider>
         <Head>
           <title>あみだくじサイト | Amidakuji.net</title>
-          <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0" />
+          {/* <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0" /> */}
         </Head>
         <props.Component {...props.pageProps} />
         <ToastContainer />
