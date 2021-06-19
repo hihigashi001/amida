@@ -22,7 +22,7 @@ const Footer = () => {
           text={url}
           onCopy={() => info(`クリップボードにコピーしました！`)}
         >
-          <p className="inline-block bg-blue-500  hover:bg-blue-300 border-2 border-gray-200 text-white p-2 font-bold text-xs focus:outline-none w-1/2 h-12 text-center"><Icon icon={faCopy} /> このページのURLをコピー</p>
+          <p className="inline-block bg-blue-500  hover:bg-blue-300 border-2 border-gray-200 text-seoColor p-2 font-bold text-xs focus:outline-none w-1/2 h-12 text-center"><Icon icon={faCopy} /> このページのURLをコピー</p>
         </CopyToClipboard>
       </div>
 

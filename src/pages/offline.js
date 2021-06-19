@@ -129,7 +129,7 @@ export const offline = () => {
                     </div>
                 </div>
                 <div className="my-4 flex justify-center">
-                    <Link href="/"><a className="p-4 bg-primary hover:bg-secondary text-white font-bold text-xs focus:outline-none">あみだくじを作成する</a></Link>
+                    <Link href="/"><a className="p-4 bg-primary hover:bg-secondary text-seoColor font-bold text-xs focus:outline-none">あみだくじを作成する</a></Link>
                 </div>
             </div>
         </UserLayout >

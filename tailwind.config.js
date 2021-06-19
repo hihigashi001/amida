@@ -28,6 +28,7 @@ module.exports = {
         'tertiary': '#EDF4F0',
         'hover': '#FCFADE',
         'hoverCommit': '#faf6be',
+        'seoColor': '#020202',
       },
 
     },
