@@ -269,7 +269,7 @@ export const Pried = (props) => {
                                 <div key={i} colSpan="2">
                                     <label htmlFor="amida0" className="text-gray-700">アイテム {i + 1}</label>
                                     <AsyncCreatableSelect
-                                        id={"amida0"}
+                                        // id={"amida0"}
                                         instanceId={"amida0"}
                                         inputId={"amida0"}
                                         isClearable={true}
@@ -287,7 +287,7 @@ export const Pried = (props) => {
                                 <div key={i} className="pt-4" colSpan="2">
                                     <label htmlFor="amida1" className="text-gray-700">アイテム {i + 1}</label>
                                     <AsyncCreatableSelect
-                                        id={"amida1"}
+                                        // id={"amida1"}
                                         instanceId={"amida1"}
                                         inputId={"amida1"}
                                         isClearable={true}
@@ -305,7 +305,7 @@ export const Pried = (props) => {
                                 <div key={i} className="pt-4" colSpan="2">
                                     <label htmlFor="amida2" className="text-gray-700">アイテム {i + 1}</label>
                                     <AsyncCreatableSelect
-                                        id={"amida2"}
+                                        // id={"amida2"}
                                         instanceId={"amida2"}
                                         inputId={"amida2"}
                                         isClearable={true}
@@ -323,7 +323,7 @@ export const Pried = (props) => {
                                 <div key={i} className="pt-4" colSpan="2">
                                     <label htmlFor="amida3" className="text-gray-700">アイテム {i + 1}</label>
                                     <AsyncCreatableSelect
-                                        id={"amida3"}
+                                        // id={"amida3"}
                                         instanceId={"amida3"}
                                         inputId={"amida3"}
                                         isClearable={true}
@@ -341,7 +341,7 @@ export const Pried = (props) => {
                                 <div key={i} className="pt-4" colSpan="2">
                                     <label htmlFor="amida4" className="text-gray-700">アイテム {i + 1}</label>
                                     <AsyncCreatableSelect
-                                        id={"amida4"}
+                                        // id={"amida4"}
                                         instanceId={"amida4"}
                                         inputId={"amida4"}
                                         isClearable={true}
@@ -359,7 +359,7 @@ export const Pried = (props) => {
                                 <div key={i} className="pt-4" colSpan="2">
                                     <label htmlFor="amida5" className="text-gray-700">アイテム {i + 1}</label>
                                     <AsyncCreatableSelect
-                                        id={"amida5"}
+                                        // id={"amida5"}
                                         instanceId={"amida5"}
                                         inputId={"amida5"}
                                         isClearable={true}
@@ -377,7 +377,7 @@ export const Pried = (props) => {
                                 <div key={i} className="pt-4" colSpan="2">
                                     <label htmlFor="amida6" className="text-gray-700">アイテム {i + 1}</label>
                                     <AsyncCreatableSelect
-                                        id={"amida6"}
+                                        // id={"amida6"}
                                         instanceId={"amida6"}
                                         inputId={"amida6"}
                                         isClearable={true}
@@ -395,7 +395,7 @@ export const Pried = (props) => {
                                 <div key={i} className="pt-4" colSpan="2">
                                     <label htmlFor="amida7" className="text-gray-700">アイテム {i + 1}</label>
                                     <AsyncCreatableSelect
-                                        id={"amida7"}
+                                        // id={"amida7"}
                                         instanceId={"amida7"}
                                         inputId={"amida7"}
                                         isClearable={true}
@@ -413,7 +413,7 @@ export const Pried = (props) => {
                                 <div key={i} className="pt-4" colSpan="2">
                                     <label htmlFor="amida8" className="text-gray-700">アイテム {i + 1}</label>
                                     <AsyncCreatableSelect
-                                        id={"amida8"}
+                                        // id={"amida8"}
                                         instanceId={"amida8"}
                                         inputId={"amida8"}
                                         isClearable={true}
@@ -431,7 +431,7 @@ export const Pried = (props) => {
                                 <div key={i} className="pt-4" colSpan="2">
                                     <label htmlFor="amida9" className="text-gray-700">アイテム {i + 1}</label>
                                     <AsyncCreatableSelect
-                                        id={"amida9"}
+                                        // id={"amida9"}
                                         instanceId={"amida9"}
                                         inputId={"amida9"}
                                         isClearable={true}
