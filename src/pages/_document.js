@@ -1,5 +1,4 @@
 import Document, { Head, Html, Main, NextScript } from "next/document";
-// import { existsGaId, GA_ID } from 'src/utility/gtag';
 
 class MyDocument extends Document {
   static async getInitialProps(ctx) {
@@ -26,23 +25,6 @@ class MyDocument extends Document {
           <meta property="og:locale" content="ja_JP" />
           <meta property="og:site_name" content="完全無料シンプルあみだくじオンラインサイト" />
           <meta property="og:image" content="https://amidakuji.net/amidakuji.png" />
-          <script data-ad-client="ca-pub-9679478765506731" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-          {/* {existsGaId && (
-            <>
-              <script async src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`} />
-              <script
-                dangerouslySetInnerHTML={{
-                  __html: `
-                  window.dataLayer = window.dataLayer || [];
-                  function gtag(){dataLayer.push(arguments);}
-                  gtag('js', new Date());
-                  gtag('config', '${GA_ID}', {
-                    page_path: window.location.pathname,
-                  });`,
-                }}
-              />
-            </>
-          )} */}
         </Head>
         <body>
           <Main />
