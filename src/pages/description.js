@@ -26,6 +26,7 @@ export const description = () => {
                         もちろんあみだくじの結果はすべての選択肢が選択されるまで隠されているので公平なくじが出来ます。
                         オンラインなのでインターネット経由で引くことが出来ます。
                         スマホ、PCなどに対応していて、完全無料で会員登録も必要ありません。あみだくじアプリのようなインストール作業も不要です。
+                        <a href="http://ninkirank.misty.ne.jp/14/hihigashi001.htm" target="_blank" >人気サイトランキング</a>に登録しており上位を目指してます。
                     </div>
                 </div>
                 <div className="mt-2 p-2">
