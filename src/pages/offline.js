@@ -13,7 +13,7 @@ export const offline = () => {
                     <div>
                         誰もが一度は作ったことがあるのではないでしょうか。しかし、いざ作ってみるとどうやって作っていいのか分からない人もいると思います。
                         一般的なあみだくじの作り方を詳しく紹介しますのでご安心ください。
-                </div>
+                    </div>
                     <h2 className="text-primary font-bold my-4">用意するもの</h2>
                     <div>
                         紙・ペン
@@ -56,7 +56,7 @@ export const offline = () => {
                     <div className="p-8">
                         <div>
                             縦線を横線で「はしご状」に横線を加えます。手書きの場合は、書いている人が横線を書くと平等性に欠けるので横線を書いた人は一番最後に選ぶと良いでしょう。
-              　　　　　  </div>
+                        </div>
                         <Image
                             src="/offline3.png"
                             alt="あみだの横線を書く"
@@ -68,7 +68,7 @@ export const offline = () => {
                     <div className="p-8">
                         <div>
                             最後に、横線が見えないように何かで隠すか紙を折り曲げるなどして完成になります。
-            　　　　　    </div>
+                        </div>
                         <Image
                             src="/offline4.png"
                             alt="あみだの完成"
@@ -81,7 +81,7 @@ export const offline = () => {
                     <div className="p-8">
                         <div>
                             作成以外の人から選ぶようにします。一人のあみだくの場合は横線を多く入れる等して結果がわかない状態にしましょう。
-              　　　　  </div>
+                        </div>
                         <Image
                             src="/offline5.png"
                             alt="あみだを選ぶ"
@@ -93,7 +93,7 @@ export const offline = () => {
                     <div className="p-8">
                         <div>
                             基本的には、下に向かって線をたどりますが、横線があったらそちらに進みます。手書きの場合は、上方向に線を引っ張る等の予期せぬ線があったら一生ゴールにたどりつけない事もあります。
-               　　　　 </div>
+                        </div>
                         <Image
                             src="/offline6.png"
                             alt="あみだの線をたどる"
@@ -106,19 +106,19 @@ export const offline = () => {
                     <div className="p-8">
                         <div>
                             一人であみだくじを作っても線を増やしてところで公平なくじ引きなのか議論が発生するところだともいます。また、線を増やすことによってゴールに行けなくなる可能性や線が複雑になりすぎて見づらくなるなどの支障も発生します。そのため、手書きのあみだくじは複数人で物事を決めるのに向いていると思います。
-                </div>
+                        </div>
                     </div>
                     <h4><span>02</span>誰が作るか問題</h4>
                     <div className="p-8">
                         <div>
                             複数の人でやった場合でも問題が発生します。それは、誰が作るか問題です。作った人が最後にあみだを選べばそのあみだくじは公平にはなりますが、作った人は最後に選ばないといけない等の制約があります。また、手書き作ると意外と横線のセンスが問われるので作る手間と負担が制作者にかかります。
-                </div>
+                        </div>
                     </div>
                     <h4><span>03</span>みんなで集まれない問題</h4>
                     <div className="p-8">
                         <div>
                             現在、世の中的に同じ部屋に多くの人が集まることが困難になっています。衛生的に考えても良くないし、密になりやすいのでいざという時にできない事が多いと思います。
-                </div>
+                        </div>
                     </div>
 
                     <h2 className="text-primary font-bold my-4">最後に</h2>
@@ -126,7 +126,7 @@ export const offline = () => {
                         如何だったでしょうか。普通の手書きのあみだくじはオンラインあみだくじサイトに比べて奥が深く難しく感じたのではないでしょうか。
                         公平なジャッジをするためにはぜひともオンラインあみだくじをご活用下さい。
                         下のボタンからすごく簡単に作成できます！もちろん無料です。
-                </div>
+                    </div>
                 </div>
                 <div className="my-4 flex justify-center">
                     <Link href="/"><a className="p-4 bg-primary hover:bg-secondary text-white font-bold text-xs focus:outline-none">あみだくじを作成する</a></Link>
