@@ -2,6 +2,7 @@ import Link from "next/link"
 import Image from "next/image"
 // layout
 import { UserLayout } from "src/layouts/UserLayout"
+import { A8Adsence } from "src/components/shared/A8Adsence"
 
 export const offline = () => {
     return (
@@ -131,6 +132,7 @@ export const offline = () => {
                 <div className="my-4 flex justify-center">
                     <Link href="/"><a className="p-4 bg-primary hover:bg-secondary text-seoColor font-bold text-xs focus:outline-none">あみだくじを作成する</a></Link>
                 </div>
+                <A8Adsence />
             </div>
         </UserLayout >
     )

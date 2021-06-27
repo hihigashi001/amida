@@ -2,6 +2,7 @@ import Link from 'next/link'
 // import AdSense from 'react-adsense';
 // layout
 import { UserLayout } from "src/layouts/UserLayout"
+import { A8Adsence } from "src/components/shared/A8Adsence"
 
 export const description = () => {
 
@@ -64,7 +65,7 @@ export const description = () => {
                     <p>オフラインで使う場合　：「<Link href="/offline"><a className="text-blue-700">こちらから</a></Link>」</p>
 
                 </div>
-                <div className="bg-white mt-8 p-8">
+                <div className="bg-white mt-8 mb-4 p-8">
                     <h2 className="text-primary font-bold flex justify-center mb-8">プライバシーポリシー・免責事項</h2>
                     <h2 className="text-primary font-bold my-4">免責事項</h2>
                     <div>
@@ -86,6 +87,7 @@ export const description = () => {
                         <p>お問合せ ：「<Link href="/contact"><a className="text-blue-700">こちらから</a></Link>」</p>
                     </div>
                 </div>
+                <A8Adsence />
             </div>
         </UserLayout >
     )
