@@ -114,7 +114,6 @@ const Home = () => {
           <Button className="p-4 my-8 w-96" onClick={onClickCreate}>あみだくじを作る</Button>
         </div>
       </div>
-      <a href="https://webranking.net/ranking?id=193837">ゲームランキング</a>に登録中！
     </UserLayout>
   )
 }
