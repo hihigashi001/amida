@@ -71,7 +71,7 @@ const Home = () => {
     <UserLayout>
       <div>
         <div className="my-4 flex justify-center ">
-          <h2 className="text-gray-700">あみだくじ作成</h2>
+          <h1>あみだくじ作成</h1>
         </div>
         <div className="mb-4">
           <TitleInput value={title} onChange={(e) => setTitle(e.target.value)} />
