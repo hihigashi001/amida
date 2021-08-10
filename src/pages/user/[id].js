@@ -42,7 +42,6 @@ import { db } from "src/utility/firebase"
 
 // layout
 import { UserLayout } from "src/layouts/UserLayout"
-import { A8Adsence } from "src/components/shared/A8Adsence"
 
 export const user = ({ params }) => {
     const amidaData = useSelector(selectAmidakuji);
@@ -206,7 +205,6 @@ export const user = ({ params }) => {
                         <Button className="p-4" onClick={handleOnClick}>残りを全て選択する</Button>
                     </div>
                 </div>
-                <A8Adsence />
             </div>
         )
     }
