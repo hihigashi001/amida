@@ -70,13 +70,11 @@ const Home = () => {
   return (
     <UserLayout>
       <div>
-        <div className="my-4 flex justify-center ">
-          <h1>あみだくじ作成</h1>
-        </div>
+        <h1>あみだくじ作成</h1>
         <div className="mb-4">
           <TitleInput value={title} onChange={(e) => setTitle(e.target.value)} />
         </div>
-        <label className="text-seoColor font-bold">2. あみだくじの本数</label><p className="text-xs text-gray-700"> ※2~10本で選んで、アイテムを編集してください。</p>
+        <label className="text-primary font-bold">2. あみだくじの本数</label><p className="text-xs text-gray-700"> ※2~10本で選んで、アイテムを編集してください。</p>
         <div className="flex justify-center">
           <p className="font-bold text-2xl mx-2 text-gray-700">{count} 本</p>
         </div>
@@ -84,7 +82,7 @@ const Home = () => {
           <Button className="p-4 mt-4" onClick={onClickOneAdd}>アイテムを増やす</Button>
           <Button className="p-4 mt-4 ml-4" onClick={onClickOneSub}>アイテムを減らす</Button>
         </div>
-        <label className=" text-seoColor font-bold">3. アイテムの編集</label>
+        <label className=" text-primary font-bold">3. アイテムの編集</label>
         <div className="p-4 bg-white shadow-xl rounded-md border border-secondary">
           <Pried
             playerCount={count}

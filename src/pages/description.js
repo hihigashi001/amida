@@ -43,20 +43,6 @@ export const description = () => {
                     </div>
                 </div>
                 <div className="mt-2 p-2">
-                    <h2 className="text-primary font-bold my-4">世界のあみだくじ事情</h2>
-                    <div>
-                        あみだくじは調べてみると、中国由来のようで、中国韓国あたりでは使われているようですね。欧米の人たちには一から説明する必要があると思います。
-                        中国語の言葉から Ghost Leg と訳されているのも見かけますが、個人的には ladder lottery 「はしごくじ」の方が見た目からしても分かりやすいと思います。
-                        どちらにせよ、１から説明するので、Amidakujiのままでいい気もしますね。
-
-                        Amidakuji is one of the popular methods of decision-making in Asia.
-                        あみだくじは、アジア圏でよくやられている意思決定方法のひとつです。
-
-                        あとは口で言うより、やって見せる方が早いと思います。
-
-                    </div>
-                </div>
-                <div className="mt-2 p-2">
                     <h2 className="text-primary font-bold my-4">「あみだくじ」を使うシチュエーション</h2>
                     <div className="mb-2">
                         プライベートでの使用が多いようにも思えるこのゲームですが、仕事でも意外と使えます。例えば、記者発表会を開催するに当たり、司会役、受付役、記録写真係、質疑応答のマイク係など、仕事の役割分担を決めるときに役に立ちます。
