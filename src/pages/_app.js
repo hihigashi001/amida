@@ -16,7 +16,7 @@ const App = (props) => {
       <ModalProvider>
         <Head>
           <title>あみだくじサイト | Amidakuji.net</title>
-          {/* <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0" /> */}
+          <script data-ad-client="ca-pub-9679478765506731" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
         </Head>
         <props.Component {...props.pageProps} />
         <ToastContainer />
