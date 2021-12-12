@@ -1,5 +1,6 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import { db, dataNow } from "src/utility/firebase";
+import { shuffle } from "src/utility/function"
 
 const init = {
     amidakuji: {
@@ -233,10 +234,26 @@ export const amidaCreate = async (props) => {
     const player9 = ""
     const player10 = ""
     const createAt = dataNow()
+    const sendArray = [pried1, pried2, pried3, pried4, pried5, pried6, pried7, pried8, pried9, pried10]
+    const newArray = []
+    for (let i = 0; i < count; i++) {
+        newArray.push(sendArray[i])
+    }
+    shuffle(newArray)
+    const priedNew1 = newArray[0]
+    const priedNew2 = newArray[1]
+    const priedNew3 = newArray[2]
+    const priedNew4 = newArray[3]
+    const priedNew5 = newArray[4]
+    const priedNew6 = newArray[5]
+    const priedNew7 = newArray[6]
+    const priedNew8 = newArray[7]
+    const priedNew9 = newArray[8]
+    const priedNew10 = newArray[9]
     try {
         await db
             .collection('amidakuji')
-            .add({ title, url, count, random, pried1, pried2, pried3, pried4, pried5, pried6, pried7, pried8, pried9, pried10, player1, player2, player3, player4, player5, player6, player7, player8, player9, player10, createAt });
+            .add({ title, url, count, random, priedNew1, priedNew2, priedNew3, priedNew4, priedNew5, priedNew6, priedNew7, priedNew8, priedNew9, priedNew10, player1, player2, player3, player4, player5, player6, player7, player8, player9, player10, createAt });
     } catch (err) {
         console.log('Error add document:', err);
     }
