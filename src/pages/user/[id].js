@@ -238,7 +238,7 @@ export async function getStaticProps({ params }) {
     const postData = await fetchAmidaUrl2(params.id)
     return {
         props: {
-            postData: await postData
+            postData: postData
         }
     }
 }

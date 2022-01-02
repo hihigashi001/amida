@@ -50,21 +50,20 @@ const Home = () => {
       url: url,
       count: count,
       random: random,
-      pried1: pried1,
-      pried2: pried2,
-      pried3: pried3,
-      pried4: pried4,
-      pried5: pried5,
-      pried6: pried6,
-      pried7: pried7,
-      pried8: pried8,
-      pried9: pried9,
-      pried10: pried10
+      priedProps1: pried1,
+      priedProps2: pried2,
+      priedProps3: pried3,
+      priedProps4: pried4,
+      priedProps5: pried5,
+      priedProps6: pried6,
+      priedProps7: pried7,
+      priedProps8: pried8,
+      priedProps9: pried9,
+      priedProps10: pried10
     }
     const pushPage = '/user/' + url
     amidaCreate(sendData)
     router.push(pushPage)
-
   }
 
   return (
